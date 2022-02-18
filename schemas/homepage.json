@@ -1,0 +1,10 @@
+{
+    "Main": {
+      "test_title": {
+        "type": "Text",
+        "config": {
+          "label": "test title"
+        }
+      }
+    }
+  }
