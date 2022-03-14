@@ -1,15 +1,16 @@
 import * as React from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
+import "../styles/fonts.scss";
+import Layout from "../components/Layout";
 
 const MainContainer = styled.div``;
 
 const IndexPage = ({ data }) => {
   const homepageQuery = data.prismicHomepage.data;
   return (
-    <MainContainer>
-      <h1>{homepageQuery.test_title}</h1>
-    </MainContainer>
+    <Layout>
+    </Layout>
   );
 };
 

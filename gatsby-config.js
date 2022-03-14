@@ -3,6 +3,7 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
+    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-source-prismic",
       options: {
