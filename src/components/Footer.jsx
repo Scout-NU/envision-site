@@ -7,6 +7,8 @@ const FooterContainer = styled.div`
   font-family: "Space Mono", monospace;
   width: 100vw;
   background-color: ${colors.black};
+  position: relative;
+  z-index: 1;
 `;
 
 const FooterContent = styled.div`

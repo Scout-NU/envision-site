@@ -4,12 +4,16 @@ import colors from "../styles/colors";
 
 const BackgroundColor = styled.div`
   background-color: ${colors.black};
+  position: relative;
+  z-index: 1;
+
 `;
 
 const HeaderContainer = styled.div`
   font-family: "Space Mono", monospace;
   font-size: 16px;
   position: relative;
+
   padding-top: 131px;
   padding-bottom: 57px;
 
