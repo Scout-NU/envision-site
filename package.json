@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@prismicio/react": "^2.0.6",
+    "@trendyol-js/react-carousel": "^2.0.1",
     "babel-plugin-styled-components": "^2.0.3",
     "gatsby": "^4.7.2",
     "gatsby-plugin-image": "^2.7.0",
@@ -23,8 +24,8 @@
     "gatsby-plugin-sass": "^5.9.0",
     "gatsby-plugin-styled-components": "^5.7.0",
     "gatsby-source-prismic": "^5.2.5",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "sass": "^1.49.9",
     "styled-components": "^5.3.3"
