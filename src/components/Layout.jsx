@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../components/Header.jsx";
-import Footer from "./Footer.jsx";
+import Header from "../components/Header/Header.jsx";
+import Footer from "../components/Footer/Footer.jsx";
 import "../styles/fonts.scss";
 const LayoutContainer = styled.div``;
 
