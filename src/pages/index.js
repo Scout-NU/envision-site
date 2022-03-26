@@ -5,31 +5,19 @@ import "../styles/fonts.scss";
 import Layout from "../components/Layout";
 import ENVISION from "../images/svg/ENVISION.svg";
 import HeroImage from "../images/herogradient.png";
-
-const HeroContainer = styled.div`
-background: url(${HeroImage}) no-repeat center top;
-background-size: cover;
-
-
-`;
-
-const HeroContent = styled.div`
-  position: relative;
-  z-index: 1;
-
-  padding-top: 233px;
-  margin-left: 6vw;
-  padding-bottom: 256px;
-  svg {
-  }
-`;
-
-const HeroDescription = styled.div`
-  font-family: "Space Mono", monospace;
-  font-size: 27px;
-  width: 34vw;
-  margin-top: 39px;
-`;
+import Envision from "../images/ENVISION.png";
+import colors from "../styles/colors";
+import fonts from "../styles/font_names";
+import {
+  HeroContainer,
+  HeroContent,
+  HeroDescription,
+  MissionSection,
+  MissionDescription,
+  MissionTitle,
+  MissionCTA,
+  CTASection,
+} from "../styles/Homepage.styles";
 
 const IndexPage = ({ data }) => {
   const homepageQuery = data.prismicHomepage.data;
@@ -39,15 +27,44 @@ const IndexPage = ({ data }) => {
         {/* <img src={HeroImage} /> */}
 
         <HeroContent>
-          <ENVISION />
+          <img alt="Envision" src={Envision} />
           <HeroDescription>
-            We’re the first equity-free accelerator for young, underrepresented
-            founders.
+            {homepageQuery.hero_description.text}
           </HeroDescription>
         </HeroContent>
+
+        <MissionSection>
+          <MissionTitle>{homepageQuery.mission_title}</MissionTitle>
+          <MissionDescription>
+            {homepageQuery.mission_description.text} <br />
+            <CTASection>
+              <MissionCTA href={`/${homepageQuery.mission_cta_destination}`}>
+                {homepageQuery.mission_cta_text}
+              </MissionCTA>
+            </CTASection>
+          </MissionDescription>
+        </MissionSection>
       </HeroContainer>
     </Layout>
   );
 };
+
+export const homepage = graphql`
+  query HomeQuery {
+    prismicHomepage {
+      data {
+        hero_description {
+          text
+        }
+        mission_title
+        mission_description {
+          text
+        }
+        mission_cta_text
+        mission_cta_destination
+      }
+    }
+  }
+`;
 
 export default IndexPage;

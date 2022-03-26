@@ -1,10 +1,77 @@
 {
-    "Main": {
-      "test_title": {
-        "type": "Text",
-        "config": {
-          "label": "test title"
-        }
+  "Main": {
+    "main_hero_title": {
+      "type": "Text",
+      "config": {
+        "label": "Main Hero Title"
+      }
+    },
+    "hero_description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Hero Description"
+      }
+    },
+    "mission_title": {
+      "type": "Text",
+      "config": {
+        "label": "Mission Title"
+      }
+    },
+    "mission_description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Mission Description"
+      }
+    },
+    "mission_cta_text": {
+      "type": "Text",
+      "config": {
+        "label": "Mission CTA Text"
+      }
+    },
+    "mission_cta_destination": {
+      "type": "Text",
+      "config": {
+        "label": "Mission CTA Destination"
+      }
+    },
+    "venture": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "venture_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Venture Image"
+            }
+          },
+          "venture_title": {
+            "type": "Text",
+            "config": {
+              "label": "Venture Title"
+            }
+          },
+          "venture_description": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "Venture Description"
+            }
+          },
+          "money_raised": {
+            "type": "Text",
+            "config": {
+              "label": "Money Raised"
+            }
+          }
+        },
+        "label": "Venture"
       }
     }
   }
+}
