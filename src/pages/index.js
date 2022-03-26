@@ -50,14 +50,4 @@ const IndexPage = ({ data }) => {
   );
 };
 
-export const homepage = graphql`
-  query HomeQuery {
-    prismicHomepage {
-      data {
-        test_title
-      }
-    }
-  }
-`;
-
 export default IndexPage;

@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   plugins: [
     "gatsby-plugin-styled-components",
@@ -8,7 +12,7 @@ module.exports = {
       resolve: "gatsby-source-prismic",
       options: {
         repositoryName: `envision`,
-        accessToken: `MC5ZaEFWVUJFQUFDRUFWeGVh.C--_vU0CUF1477-977-977-977-977-9Ju-_ve-_vQEa77-977-977-977-977-977-977-9Ye-_ve-_ve-_ve-_vVgN77-9`,
+        accessToken: process.env.PRISMIC_KEY,
         schemas: {
           homepage: require("./schemas/homepage.json"),
         },
