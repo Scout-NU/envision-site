@@ -7,20 +7,7 @@ import Layout from "../components/Layout";
 const MainContainer = styled.div``;
 
 const IndexPage = ({ data }) => {
-  // const homepageQuery = data.prismicHomepage.data;
-  return (
-    <Layout>
-    </Layout>
-  );
+  return <Layout></Layout>;
 };
-
-// export const homepage = graphql`
-//   query HomeQuery {
-//     prismicHomepage {
-//       data {
-//       }
-//     }
-//   }
-// `;
 
 export default IndexPage;

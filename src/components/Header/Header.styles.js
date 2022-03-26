@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import colors from "../../styles/colors";
 import fonts from "../../styles/font_names";
+
 export const BackgroundColor = styled.div`
   background-color: ${colors.black};
 `;
