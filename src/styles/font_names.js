@@ -2,11 +2,11 @@ const fonts = {
     // primary
     space_mono: "Space Mono",
     itc_avante_garde: "itc-avant-garde-gothic-pro",
-    footerSizeDesktop: 20,
-    LargeBook: 27,
-    Heading2Size: 60,
-    BodySize: 18,
-    buttonSize: 16,
+    footerSizeDesktop: 1.25,
+    LargeBook: "1.688em",
+    Heading2Size: "3.75em",
+    BodySize: "1.125em",
+    buttonSize: "1em",
   };
   
   export default fonts;

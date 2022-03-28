@@ -19,7 +19,7 @@ export const HeroContent = styled.div`
 
 export const HeroDescription = styled.div`
   font-family: ${fonts.itc_avante_garde}, sans-serif;
-  font-size: ${fonts.LargeBook}px;
+  font-size: ${fonts.LargeBook};
   font-weight: 500;
   width: 34vw;
   color: ${colors.white};
@@ -34,7 +34,7 @@ export const MissionSection = styled.div`
 
 export const MissionTitle = styled.div`
   font-family: ${fonts.itc_avante_garde}, sans-serif;
-  font-size: ${fonts.Heading2Size}px;
+  font-size: ${fonts.Heading2Size};
   color: ${colors.white};
   text-transform: uppercase;
   margin-left: 22vw;
@@ -46,7 +46,7 @@ export const MissionDescription = styled.div`
   margin-left: 66px;
   color: ${colors.white};
   margin-top: 50px;
-  font-size: ${fonts.BodySize}px;
+  font-size: ${fonts.BodySize};
 `;
 
 export const MissionCTA = styled.a`
@@ -56,7 +56,7 @@ export const MissionCTA = styled.a`
   padding: 30px 70px;
   color: ${colors.black};
   text-decoration: none;
-  font-size: ${fonts.BodySize}px;
+  font-size: ${fonts.BodySize};
 `;
 
 export const CTASection = styled.div`
