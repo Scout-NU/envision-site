@@ -24,8 +24,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <HeroContainer>
-        {/* <img src={HeroImage} /> */}
-
         <HeroContent>
           <img alt="Envision" src={Envision} />
           <HeroDescription>
