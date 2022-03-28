@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import "../styles/fonts.scss";
+import colors from "../styles/colors"
 import Layout from "../components/Layout";
 import { Carousel } from "@trendyol-js/react-carousel";
 import VentureCard from "../components/VentureCard";
@@ -18,8 +19,13 @@ const Box = styled.div`
 `;
 
 const CarouselSection = styled.div`
-height: 500px;
-width: 70vw;
+width: 100vw;
+padding-top: 68px;
+padding-bottom: 68px;
+background-color: ${colors.black};
+display: flex;
+justify-content: center;
+align-content: center;
 
 .carousel {
   width: 70vw;
@@ -38,24 +44,13 @@ const IndexPage = ({ data }) => {
     <Layout>
 
       <CarouselSection>
-      <Carousel className="carousel" show={1.5} slide={1} swiping={true}>
-        {console.log(homepageQuery.venture)}
+      <Carousel className="carousel" show={1.08} slide={1} swiping={true}>
         <VentureCard venture={homepageQuery.venture[0]} />
         <VentureCard venture={homepageQuery.venture[1]} />
         <VentureCard venture={homepageQuery.venture[2]} />
         <VentureCard venture={homepageQuery.venture[3]} />
-
       </Carousel>
       </CarouselSection>
-
-      {homepageQuery.venture.map((venture) => {
-        <div>
-          <h1>testsetestset</h1>
-        </div>
-        {console.log(venture)}
-      // <VentureCard venture={venture.venture} />;
-
-      })}
 
 
     </Layout>
