@@ -4,10 +4,21 @@ import { graphql } from "gatsby";
 import "../styles/fonts.scss";
 import colors from "../styles/colors";
 import Layout from "../components/Layout";
-import { Carousel } from "@trendyol-js/react-carousel";
-import VentureCard from "../components/VentureCard";
-
-const MainContainer = styled.div``;
+import ENVISION from "../images/svg/ENVISION.svg";
+import HeroImage from "../images/herogradient.png";
+import Envision from "../images/ENVISION.png";
+import colors from "../styles/colors";
+import fonts from "../styles/font_names";
+import {
+  HeroContainer,
+  HeroContent,
+  HeroDescription,
+  MissionSection,
+  MissionDescription,
+  MissionTitle,
+  MissionCTA,
+  CTASection,
+} from "../styles/Homepage.styles";
 
 const Box = styled.div`
   width: 500px;
@@ -44,6 +55,27 @@ const IndexPage = ({ data }) => {
   const homepageQuery = data.prismicHomepage.data;
   return (
     <Layout>
+
+      <HeroContainer>
+        <HeroContent>
+          <img alt="Envision" src={Envision} />
+          <HeroDescription>
+            {homepageQuery.hero_description.text}
+          </HeroDescription>
+        </HeroContent>
+
+        <MissionSection>
+          <MissionTitle>{homepageQuery.mission_title}</MissionTitle>
+          <MissionDescription>
+            {homepageQuery.mission_description.text} <br />
+            <CTASection>
+              <MissionCTA href={`/${homepageQuery.mission_cta_destination}`}>
+                {homepageQuery.mission_cta_text}
+              </MissionCTA>
+            </CTASection>
+          </MissionDescription>
+        </MissionSection>
+      </HeroContainer>
       <CarouselSection>
         <Carousel className="carousel" show={1.08} slide={1} swiping={true}>
           <VentureCard venture={homepageQuery.venture[0]} />
@@ -71,6 +103,15 @@ export const homepage = graphql`
           venture_title
           venture_name
         }
+        hero_description {
+          text
+        }
+        mission_title
+        mission_description {
+          text
+        }
+        mission_cta_text
+        mission_cta_destination
       }
     }
   }

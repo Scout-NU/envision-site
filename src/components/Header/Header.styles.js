@@ -8,7 +8,7 @@ export const BackgroundColor = styled.div`
 
 export const HeaderContainer = styled.div`
   font-family: ${fonts.space_mono}, monospace;
-  font-size: ${fonts.buttonSize}px;
+  font-size: ${fonts.buttonSize};
   position: relative;
   padding-top: 131px;
   padding-bottom: 57px;

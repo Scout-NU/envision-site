@@ -16,12 +16,12 @@ export const FooterContent = styled.div`
 
 export const FooterCol = styled.div`
   margin-right: 8vw;
-  font-size: ${fonts.footerSizeDesktop}px;
+  font-size: ${fonts.footerSizeDesktop};
 
   input {
     margin-top: 9px;
     font-family: ${fonts.space_mono}, monospace;
-    font-size: ${fonts.footerSizeDesktop}px;
+    font-size: ${fonts.footerSizeDesktop};
     width: 27vw;
     height: 51px;
     border-radius: 9px;
@@ -34,7 +34,7 @@ export const FooterText = styled.div`
 `;
 
 export const FooterLinks = styled.div`
-  font-size: ${fonts.footerSizeDesktop}px;
+  font-size: ${fonts.footerSizeDesktop};
   margin-bottom: 43px;
 `;
 
@@ -60,7 +60,7 @@ export const FooterSocial = styled.div`
 
 export const FooterCopyright = styled.div`
   color: ${colors.white};
-  font-size: ${fonts.footerSizeDesktop}px;
+  font-size: ${fonts.footerSizeDesktop};
   padding-bottom: 23px;
   width: 100vw;
   text-align: center;
