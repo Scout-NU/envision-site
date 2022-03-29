@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import "../styles/fonts.scss";
-import colors from "../styles/colors"
+import colors from "../styles/colors";
 import Layout from "../components/Layout";
 import { Carousel } from "@trendyol-js/react-carousel";
 import VentureCard from "../components/VentureCard";
@@ -19,40 +19,39 @@ const Box = styled.div`
 `;
 
 const CarouselSection = styled.div`
-width: 100vw;
-padding-top: 68px;
-padding-bottom: 68px;
-background-color: ${colors.black};
-display: flex;
-justify-content: center;
-align-content: center;
+  width: 100vw;
+  padding-top: 68px;
+  padding-bottom: 68px;
+  background-color: ${colors.black};
+  display: flex;
+  justify-content: center;
+  align-content: center;
 
-.carousel {
-  width: 70vw;
+  button {
+    dispay: none;
+  }
 
-}
+  .styles-module_carousel-arrow__26sRw {
+    display: none;
+  }
 
-`
-
-
-
-
+  .carousel {
+    width: 70vw;
+  }
+`;
 
 const IndexPage = ({ data }) => {
   const homepageQuery = data.prismicHomepage.data;
   return (
     <Layout>
-
       <CarouselSection>
-      <Carousel className="carousel" show={1.08} slide={1} swiping={true}>
-        <VentureCard venture={homepageQuery.venture[0]} />
-        <VentureCard venture={homepageQuery.venture[1]} />
-        <VentureCard venture={homepageQuery.venture[2]} />
-        <VentureCard venture={homepageQuery.venture[3]} />
-      </Carousel>
+        <Carousel className="carousel" show={1.08} slide={1} swiping={true}>
+          <VentureCard venture={homepageQuery.venture[0]} />
+          <VentureCard venture={homepageQuery.venture[1]} />
+          <VentureCard venture={homepageQuery.venture[2]} />
+          <VentureCard venture={homepageQuery.venture[3]} />
+        </Carousel>
       </CarouselSection>
-
-
     </Layout>
   );
 };
@@ -70,11 +69,11 @@ export const homepage = graphql`
             url
           }
           venture_title
+          venture_name
         }
       }
     }
   }
 `;
-
 
 export default IndexPage;
