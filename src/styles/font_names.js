@@ -7,6 +7,7 @@ const fonts = {
     Heading2Size: "3.75em",
     BodySize: "1.125em",
     buttonSize: "1em",
+    NumbersSize: "6em"
   };
   
   export default fonts;

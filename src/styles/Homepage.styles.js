@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
+import Ellipse from "../images/ellipse.png";
 
 export const HeroContainer = styled.div`
   background-size: cover;
@@ -62,4 +63,49 @@ export const MissionCTA = styled.a`
 export const CTASection = styled.div`
   margin-top: 68px;
   margin-bottom: 185px;
+`;
+
+export const ByTheNumbers = styled.div`
+  background-color: ${colors.white};
+`;
+
+export const ByTheNumbersHeader = styled.div`
+  width: 100vw;
+  text-align: center;
+  font-size: ${fonts.Heading2Size};
+  color: ${colors.white};
+  background-color: ${colors.black};
+  font-family: ${fonts.itc_avante_garde};
+  padding-top: 117px;
+  padding-bottom: 77px;
+`;
+
+export const Numbers = styled.div`
+  display: flex;
+  justify-content: space-between;
+  background-color: ${colors.black};
+  color: ${colors.black};
+  font-family: ${fonts.itc_avante_garde};
+  text-align: center;
+  padding-bottom: 77px;
+  padding-left: 6vw;
+  padding-right: 6vw;
+`;
+
+export const Number = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+  height: 27vw;
+  background: url(${Ellipse}) center no-repeat;
+  background-size: 27vw;
+`;
+
+export const NumberText = styled.div`
+  font-size: ${fonts.NumbersSize};
+`;
+
+export const NumberDescription = styled.div`
+  font-size: ${fonts.LargeBook};
 `;

@@ -17,6 +17,12 @@ import {
   MissionTitle,
   MissionCTA,
   CTASection,
+  ByTheNumbers,
+  ByTheNumbersHeader,
+  Numbers,
+  Number,
+  NumberText,
+  NumberDescription,
 } from "../styles/Homepage.styles";
 
 const IndexPage = ({ data }) => {
@@ -43,6 +49,37 @@ const IndexPage = ({ data }) => {
           </MissionDescription>
         </MissionSection>
       </HeroContainer>
+
+      <ByTheNumbers>
+        <ByTheNumbersHeader>{homepageQuery.numbers_header}</ByTheNumbersHeader>
+
+        <Numbers>
+          <Number>
+            <div>
+              <NumberText>{homepageQuery.numbers[0].number}</NumberText>
+              <NumberDescription>
+                {homepageQuery.numbers[0].number_description}
+              </NumberDescription>
+            </div>
+          </Number>
+          <Number>
+            <div>
+              <NumberText>{homepageQuery.numbers[1].number}</NumberText>
+              <NumberDescription>
+                {homepageQuery.numbers[1].number_description}
+              </NumberDescription>
+            </div>
+          </Number>
+          <Number>
+            <div>
+              <NumberText>{homepageQuery.numbers[2].number}</NumberText>
+              <NumberDescription>
+                {homepageQuery.numbers[2].number_description}
+              </NumberDescription>
+            </div>
+          </Number>
+        </Numbers>
+      </ByTheNumbers>
     </Layout>
   );
 };
@@ -60,6 +97,12 @@ export const homepage = graphql`
         }
         mission_cta_text
         mission_cta_destination
+
+        numbers_header
+        numbers {
+          number
+          number_description
+        }
       }
     }
   }
