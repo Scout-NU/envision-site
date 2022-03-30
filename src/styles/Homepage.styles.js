@@ -100,6 +100,10 @@ export const Number = styled.div`
   height: 27vw;
   background: url(${Ellipse}) center no-repeat;
   background-size: 27vw;
+
+  span {
+    font-size: 48px;
+  }
 `;
 
 export const NumberText = styled.div`

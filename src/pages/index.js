@@ -54,15 +54,20 @@ const IndexPage = ({ data }) => {
         <ByTheNumbersHeader>{homepageQuery.numbers_header}</ByTheNumbersHeader>
 
         <Numbers>
-          <Number>
-            <div>
-              <NumberText>{homepageQuery.numbers[0].number}</NumberText>
-              <NumberDescription>
-                {homepageQuery.numbers[0].number_description}
-              </NumberDescription>
-            </div>
-          </Number>
-          <Number>
+          {homepageQuery.numbers.map((object, i) => (
+
+            <Number key={i}>
+            
+              <div>
+                <NumberText>{object.number.split(" ").length > 1 ? <div>{object.number.split(" ")[0]} <span>{object.number.split(" ")[1]}</span></div> : object.number.split(" ")[0]}</NumberText>
+                <NumberDescription>
+                  {object.number_description}
+                </NumberDescription>
+              </div>
+            </Number>
+          ))}
+
+          {/* <Number>
             <div>
               <NumberText>{homepageQuery.numbers[1].number}</NumberText>
               <NumberDescription>
@@ -77,7 +82,7 @@ const IndexPage = ({ data }) => {
                 {homepageQuery.numbers[2].number_description}
               </NumberDescription>
             </div>
-          </Number>
+          </Number> */}
         </Numbers>
       </ByTheNumbers>
     </Layout>
