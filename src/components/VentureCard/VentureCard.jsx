@@ -14,7 +14,7 @@ export default function VentureCard(venture) {
   return (
     <VentureContainer>
       <VentureImage>
-        <img alt="" src={venture.venture.venture_image.url} />
+        <img alt="Venture Placeholder" src={venture.venture.venture_image.url} />
       </VentureImage>
       <VentureText>
         <VentureHeader>{venture.venture.venture_title}</VentureHeader>
