@@ -1,14 +1,10 @@
 import * as React from "react";
-import styled from "styled-components";
 import { graphql } from "gatsby";
 import "../styles/fonts.scss";
-import colors from "../styles/colors";
 import Layout from "../components/Layout";
-import ENVISION from "../images/svg/ENVISION.svg";
-import HeroImage from "../images/herogradient.png";
 import Envision from "../images/ENVISION.png";
-import colors from "../styles/colors";
-import fonts from "../styles/font_names";
+import VentureCard from "../components/VentureCard/VentureCard";
+import { Carousel } from "@trendyol-js/react-carousel";
 import {
   HeroContainer,
   HeroContent,
@@ -18,44 +14,13 @@ import {
   MissionTitle,
   MissionCTA,
   CTASection,
+  CarouselSection,
 } from "../styles/Homepage.styles";
-
-const Box = styled.div`
-  width: 500px;
-  height: 500px;
-
-  background-color: red;
-
-  border: solid;
-`;
-
-const CarouselSection = styled.div`
-  width: 100vw;
-  padding-top: 68px;
-  padding-bottom: 68px;
-  background-color: ${colors.black};
-  display: flex;
-  justify-content: center;
-  align-content: center;
-
-  button {
-    dispay: none;
-  }
-
-  .styles-module_carousel-arrow__26sRw {
-    display: none;
-  }
-
-  .carousel {
-    width: 70vw;
-  }
-`;
 
 const IndexPage = ({ data }) => {
   const homepageQuery = data.prismicHomepage.data;
   return (
     <Layout>
-
       <HeroContainer>
         <HeroContent>
           <img alt="Envision" src={Envision} />
@@ -78,10 +43,9 @@ const IndexPage = ({ data }) => {
       </HeroContainer>
       <CarouselSection>
         <Carousel className="carousel" show={1.08} slide={1} swiping={true}>
-          <VentureCard venture={homepageQuery.venture[0]} />
-          <VentureCard venture={homepageQuery.venture[1]} />
-          <VentureCard venture={homepageQuery.venture[2]} />
-          <VentureCard venture={homepageQuery.venture[3]} />
+          {homepageQuery.venture.map((object, i) => (
+            <VentureCard venture={object} key={i} />
+          ))}
         </Carousel>
       </CarouselSection>
     </Layout>
