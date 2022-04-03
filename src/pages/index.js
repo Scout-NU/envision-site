@@ -23,6 +23,11 @@ import {
   Number,
   NumberText,
   NumberDescription,
+  SupporterImagesSection,
+  SupporterImages,
+  SupporterImage,
+  HomeCTAs,
+  HomeCTA,
 } from "../styles/Homepage.styles";
 
 const IndexPage = ({ data }) => {
@@ -55,36 +60,39 @@ const IndexPage = ({ data }) => {
 
         <Numbers>
           {homepageQuery.numbers.map((object, i) => (
-
             <Number key={i}>
-            
               <div>
-                <NumberText>{object.number.split(" ").length > 1 ? <div>{object.number.split(" ")[0]} <span>{object.number.split(" ")[1]}</span></div> : object.number.split(" ")[0]}</NumberText>
+                <NumberText>
+                  {object.number.split(" ").length > 1 ? (
+                    <div>
+                      {object.number.split(" ")[0]}{" "}
+                      <span>{object.number.split(" ")[1]}</span>
+                    </div>
+                  ) : (
+                    object.number.split(" ")[0]
+                  )}
+                </NumberText>
                 <NumberDescription>
                   {object.number_description}
                 </NumberDescription>
               </div>
             </Number>
           ))}
-
-          {/* <Number>
-            <div>
-              <NumberText>{homepageQuery.numbers[1].number}</NumberText>
-              <NumberDescription>
-                {homepageQuery.numbers[1].number_description}
-              </NumberDescription>
-            </div>
-          </Number>
-          <Number>
-            <div>
-              <NumberText>{homepageQuery.numbers[2].number}</NumberText>
-              <NumberDescription>
-                {homepageQuery.numbers[2].number_description}
-              </NumberDescription>
-            </div>
-          </Number> */}
         </Numbers>
       </ByTheNumbers>
+
+      <SupporterImagesSection>
+        <SupporterImages>
+          {homepageQuery.supporter_images.map((image, id) => (
+            <SupporterImage alt="Supporter Logo" src={image.image.url} />
+          ))}
+        </SupporterImages>
+      </SupporterImagesSection>
+
+      <HomeCTAs>
+        <HomeCTA href="/">BECOME A MENTOR</HomeCTA>
+        <HomeCTA href="/">PARTNER WITH US</HomeCTA>
+      </HomeCTAs>
     </Layout>
   );
 };
@@ -107,6 +115,12 @@ export const homepage = graphql`
         numbers {
           number
           number_description
+        }
+
+        supporter_images {
+          image {
+            url
+          }
         }
       }
     }
