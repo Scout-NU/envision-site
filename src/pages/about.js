@@ -8,13 +8,36 @@ import HeroImage from "../images/herogradient.png";
 import Envision from "../images/ENVISION.png";
 import colors from "../styles/colors";
 import fonts from "../styles/font_names";
+import {
+  AboutContainer,
+  AboutHero,
+  AboutHeroParagraph,
+  AboutHeroText,
+  ParagraphColumn,
+} from "../styles/About.styles";
 
 const AboutPage = ({ data }) => {
   const aboutQuery = data.prismicAbout.data;
 
   return (
     <Layout>
-      <h1>{aboutQuery.about_header}</h1>
+      <AboutContainer>
+        <AboutHero>
+          <AboutHeroText>
+            {aboutQuery.about_header.split(" ").map((word, id) => (
+              <span key={id} className={id == 2 && "orange"}>
+                {word}{" "}
+              </span>
+            ))}
+          </AboutHeroText>
+
+          <AboutHeroParagraph>
+            {aboutQuery.about_description.richText.map((paragraph, id) => (
+              <ParagraphColumn key={id}>{paragraph.text}</ParagraphColumn>
+            ))}
+          </AboutHeroParagraph>
+        </AboutHero>
+      </AboutContainer>
     </Layout>
   );
 };
