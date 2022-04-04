@@ -1,0 +1,17 @@
+{
+    "Main" : {
+      "about_header" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "About Header"
+        }
+      },
+      "about_description" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph",
+          "label" : "About Description"
+        }
+      }
+    }
+  }

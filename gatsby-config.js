@@ -15,16 +15,17 @@ module.exports = {
         accessToken: process.env.PRISMIC_KEY,
         schemas: {
           homepage: require("./schemas/homepage.json"),
+          about: require("./schemas/about.json"),
         },
       },
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /svg/
-        }
-      }
-    }
+          include: /svg/,
+        },
+      },
+    },
   ],
 };
