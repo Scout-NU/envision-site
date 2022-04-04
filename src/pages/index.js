@@ -84,7 +84,7 @@ const IndexPage = ({ data }) => {
       <SupporterImagesSection>
         <SupporterImages>
           {homepageQuery.supporter_images.map((image, id) => (
-            <SupporterImage alt="Supporter Logo" src={image.image.url} />
+            <SupporterImage key={id} alt={image.image.alt} src={image.image.url} />
           ))}
         </SupporterImages>
       </SupporterImagesSection>
@@ -120,6 +120,7 @@ export const homepage = graphql`
         supporter_images {
           image {
             url
+            alt
           }
         }
       }
