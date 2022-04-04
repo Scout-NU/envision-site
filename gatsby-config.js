@@ -15,6 +15,8 @@ module.exports = {
         accessToken: process.env.PRISMIC_KEY,
         schemas: {
           homepage: require("./schemas/homepage.json"),
+          about: {},
+
         },
       },
     },

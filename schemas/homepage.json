@@ -104,6 +104,25 @@
         },
         "label" : "Numbers"
       }
+    },
+    "supporter_images" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : {
+                "width" : 190,
+                "height" : 190
+              },
+              "thumbnails" : [ ],
+              "label" : "image"
+            }
+          }
+        },
+        "label" : "supporter images"
+      }
     }
   }
 }

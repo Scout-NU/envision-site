@@ -113,3 +113,43 @@ export const NumberText = styled.div`
 export const NumberDescription = styled.div`
   font-size: ${fonts.LargeBook};
 `;
+
+export const SupporterImagesSection = styled.div`
+  background-color: ${colors.black};
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+`;
+
+export const SupporterImages = styled.div`
+  width: 85vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+`;
+
+export const SupporterImage = styled.img`
+  margin-right: 19px;
+  margin-bottom: 28px;
+
+`;
+export const HomeCTAs = styled.div`
+  width: 100%;
+  background-color: ${colors.black};
+  justify-content: space-around;
+  display: flex;
+  padding-top: 157px;
+  padding-bottom: 250px;
+`;
+
+export const HomeCTA = styled.a`
+  background-color: ${colors.white};
+  color: ${colors.black};
+  font-family: ${fonts.space_mono};
+  font-size: ${fonts.BodySize};
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 30px 60px;
+`;
