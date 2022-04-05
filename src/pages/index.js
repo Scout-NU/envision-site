@@ -15,6 +15,17 @@ import {
   MissionCTA,
   CTASection,
   CarouselSection,
+  ByTheNumbers,
+  ByTheNumbersHeader,
+  Numbers,
+  Number,
+  NumberText,
+  NumberDescription,
+  SupporterImagesSection,
+  SupporterImages,
+  SupporterImage,
+  HomeCTAs,
+  HomeCTA,
 } from "../styles/Homepage.styles";
 
 const IndexPage = ({ data }) => {
@@ -48,6 +59,45 @@ const IndexPage = ({ data }) => {
           ))}
         </Carousel>
       </CarouselSection>
+
+      <ByTheNumbers>
+        <ByTheNumbersHeader>{homepageQuery.numbers_header}</ByTheNumbersHeader>
+
+        <Numbers>
+          {homepageQuery.numbers.map((object, i) => (
+            <Number key={i}>
+              <div>
+                <NumberText>
+                  {object.number.split(" ").length > 1 ? (
+                    <div>
+                      {object.number.split(" ")[0]}{" "}
+                      <span>{object.number.split(" ")[1]}</span>
+                    </div>
+                  ) : (
+                    object.number.split(" ")[0]
+                  )}
+                </NumberText>
+                <NumberDescription>
+                  {object.number_description}
+                </NumberDescription>
+              </div>
+            </Number>
+          ))}
+        </Numbers>
+      </ByTheNumbers>
+
+      <SupporterImagesSection>
+        <SupporterImages>
+          {homepageQuery.supporter_images.map((image, id) => (
+            <SupporterImage key={id} alt={image.image.alt} src={image.image.url} />
+          ))}
+        </SupporterImages>
+      </SupporterImagesSection>
+
+      <HomeCTAs>
+        <HomeCTA href="/">BECOME A MENTOR</HomeCTA>
+        <HomeCTA href="/">PARTNER WITH US</HomeCTA>
+      </HomeCTAs>
     </Layout>
   );
 };
@@ -76,6 +126,19 @@ export const homepage = graphql`
         }
         mission_cta_text
         mission_cta_destination
+
+        numbers_header
+        numbers {
+          number
+          number_description
+        }
+
+        supporter_images {
+          image {
+            url
+            alt
+          }
+        }
       }
     }
   }
