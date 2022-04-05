@@ -106,7 +106,7 @@ export const Numbers = styled.div`
   display: flex;
   justify-content: space-between;
   background-color: ${colors.black};
-  color: ${colors.black};
+  color: ${colors.white};
   font-family: ${fonts.itc_avante_garde};
   text-align: center;
   padding-bottom: 77px;
@@ -120,8 +120,8 @@ export const Number = styled.div`
   align-items: center;
   width: 25vw;
   height: 27vw;
-  background: url(${Ellipse}) center no-repeat;
   background-size: 27vw;
+  
 
   span {
     font-size: 48px;

@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => {
         </MissionSection>
       </HeroContainer>
       <CarouselSection>
-        <Carousel className="carousel" show={1.25} slide={1} swiping={true}>
+        <Carousel className="carousel" show={1.2} slide={1} swiping={true}>
           {homepageQuery.venture.map((object, i) => (
             <VentureCard venture={object} key={i} />
           ))}
