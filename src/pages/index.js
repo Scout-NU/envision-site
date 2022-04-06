@@ -1,13 +1,8 @@
 import * as React from "react";
-import styled from "styled-components";
 import { graphql } from "gatsby";
 import "../styles/fonts.scss";
 import Layout from "../components/Layout";
-import ENVISION from "../images/svg/ENVISION.svg";
-import HeroImage from "../images/herogradient.png";
 import Envision from "../images/ENVISION.png";
-import colors from "../styles/colors";
-import fonts from "../styles/font_names";
 import {
   HeroContainer,
   HeroContent,
@@ -84,7 +79,11 @@ const IndexPage = ({ data }) => {
       <SupporterImagesSection>
         <SupporterImages>
           {homepageQuery.supporter_images.map((image, id) => (
-            <SupporterImage key={id} alt={image.image.alt} src={image.image.url} />
+            <SupporterImage
+              key={id}
+              alt={image.image.alt}
+              src={image.image.url}
+            />
           ))}
         </SupporterImages>
       </SupporterImagesSection>

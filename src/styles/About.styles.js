@@ -10,13 +10,8 @@ export const AboutHero = styled.div`
 
 export const AboutHeroText = styled.div`
   font-size: ${fonts.Heading2Size};
-  color: ${colors.white};
   font-weight: 700;
   margin-bottom: 62px;
-
-  .orange {
-    color: ${colors.black};
-  }
 `;
 
 export const AboutHeroParagraph = styled.div`
@@ -29,6 +24,7 @@ export const ParagraphColumn = styled.div`
   margin-right: 62px;
   padding-bottom: 114px;
   font-weight: 300;
+
   font-size: ${fonts.BodySize};
 `;
 
@@ -64,6 +60,12 @@ export const GuidingPrinciple = styled.div`
   width: 44vw;
   display: flex;
   justify-content: center;
+  
+  `
+
+export const HeroHeadline = styled.span`
+  ${({ black }) =>
+    black ? `color: ${colors.black};` : `color: ${colors.white}`}
 `;
 export const GuidingPrincipleHeader = styled.div`
   font-family: ${fonts.space_mono};

@@ -1,5 +1,4 @@
 import * as React from "react";
-import styled from "styled-components";
 import { graphql } from "gatsby";
 import "../styles/fonts.scss";
 import Layout from "../components/Layout";
@@ -14,6 +13,7 @@ import {
   GuidingPrincipleHeader,
   GuidingPrinciples,
   GuidingDescription,
+  HeroHeadline,
   ParagraphColumn,
   PrinciplesHeader,
   PrinciplesSubHeader,
@@ -30,9 +30,9 @@ const AboutPage = ({ data }) => {
         <AboutHero>
           <AboutHeroText>
             {aboutQuery.about_header.split(" ").map((word, id) => (
-              <span key={id} className={id == 2 && "orange"}>
+              <HeroHeadline key={id} black={id === 2}>
                 {word}{" "}
-              </span>
+              </HeroHeadline>
             ))}
           </AboutHeroText>
 

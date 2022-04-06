@@ -1,6 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-import colors from "../../styles/colors";
 import { BackgroundColor, HeaderContainer, Logo,NavSection, NavCTA, NavLinks, NavLink } from "./Header.styles";
 
 
