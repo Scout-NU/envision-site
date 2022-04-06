@@ -1,18 +1,13 @@
 import * as React from "react";
-import styled from "styled-components";
 import { graphql } from "gatsby";
 import "../styles/fonts.scss";
 import Layout from "../components/Layout";
-import ENVISION from "../images/svg/ENVISION.svg";
-import HeroImage from "../images/herogradient.png";
-import Envision from "../images/ENVISION.png";
-import colors from "../styles/colors";
-import fonts from "../styles/font_names";
 import {
   AboutContainer,
   AboutHero,
   AboutHeroParagraph,
   AboutHeroText,
+  HeroHeadline,
   ParagraphColumn,
 } from "../styles/About.styles";
 
@@ -25,9 +20,9 @@ const AboutPage = ({ data }) => {
         <AboutHero>
           <AboutHeroText>
             {aboutQuery.about_header.split(" ").map((word, id) => (
-              <span key={id} className={id == 2 && "orange"}>
+              <HeroHeadline key={id} black={id === 2}>
                 {word}{" "}
-              </span>
+              </HeroHeadline>
             ))}
           </AboutHeroText>
 
