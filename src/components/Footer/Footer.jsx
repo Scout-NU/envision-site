@@ -1,6 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-import colors from "../../styles/colors";
 import Heart from "../../styles/heart_icon.png";
 import {
   FooterContainer,
