@@ -32,9 +32,5 @@ export const AboutContainer = styled.div``;
 
 export const HeroHeadline = styled.span`
   ${({ black }) =>
-    black
-      ? `
-color: ${colors.black};
-`
-      : `color: ${colors.white}`}
+    black ? `color: ${colors.black};` : `color: ${colors.white}`}
 `;
