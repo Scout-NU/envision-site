@@ -1,17 +1,58 @@
 {
-    "Main" : {
-      "about_header" : {
-        "type" : "Text",
-        "config" : {
-          "label" : "About Header"
-        }
-      },
-      "about_description" : {
-        "type" : "StructuredText",
-        "config" : {
-          "multi" : "paragraph",
-          "label" : "About Description"
-        }
+  "Main" : {
+    "about_header" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "About Header"
+      }
+    },
+    "about_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "label" : "About Description"
+      }
+    },
+    "guiding_principles_header" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Guiding Principles Header"
+      }
+    },
+    "guiding_principles_sub_header" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "guiding principles sub header"
+      }
+    },
+    "principles" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "principle_image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "Principle Image"
+            }
+          },
+          "principle_header" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Principle Header"
+            }
+          },
+          "principle_description" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph",
+              "label" : "Principle Description"
+            }
+          }
+        },
+        "label" : "Principles"
       }
     }
   }
+}

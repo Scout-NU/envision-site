@@ -6,7 +6,6 @@ export const AboutHero = styled.div`
   margin-left: 14vw;
   padding-top: 115px;
   font-family: ${fonts.itc_avante_garde};
-  background-color: ${colors.black};
 `;
 
 export const AboutHeroText = styled.div`
@@ -16,7 +15,7 @@ export const AboutHeroText = styled.div`
   margin-bottom: 62px;
 
   .orange {
-    color: ${colors.orange};
+    color: ${colors.black};
   }
 `;
 
@@ -25,7 +24,7 @@ export const AboutHeroParagraph = styled.div`
 `;
 
 export const ParagraphColumn = styled.div`
-  color: ${colors.white};
+  color: ${colors.black};
   width: 35vw;
   margin-right: 62px;
   padding-bottom: 114px;
@@ -34,5 +33,56 @@ export const ParagraphColumn = styled.div`
 `;
 
 export const AboutContainer = styled.div`
-  background-color: ${colors.black};
+  background-color: ${colors.white};
 `;
+
+export const AboutPrinciples = styled.div`
+margin-bottom: 314px;
+`;
+
+export const PrinciplesHeader = styled.div`
+  font-size: ${fonts.Heading2Size};
+  text-align: center;
+  font-family: ${fonts.itc_avante_garde};
+`;
+
+export const PrinciplesSubHeader = styled.div`
+  margin-top: 34px;
+  margin-bottom: 58px;
+  font-size: ${fonts.BookSub};
+  text-align: center;
+  font-weight: 300;
+  font-family: ${fonts.itc_avante_garde};
+`;
+
+export const GuidingPrinciples = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const GuidingPrinciple = styled.div`
+  width: 44vw;
+  display: flex;
+  justify-content: center;
+`;
+export const GuidingPrincipleHeader = styled.div`
+  font-family: ${fonts.space_mono};
+  font-size: ${fonts.BookSub};
+  margin-bottom: 24px;
+`;
+
+export const GuidingDescription = styled.div`
+  font-family: ${fonts.itc_avante_garde};
+  font-size: ${fonts.BodySize};
+  margin-bottom: 24px;
+`;
+
+export const GuidingPrincipleImg = styled.img`
+  width: 60px;
+  height: 60px;
+`;
+
+export const GuidingPrincipleText = styled.div`
+margin-left: 57px;
+
+`

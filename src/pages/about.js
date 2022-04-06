@@ -3,17 +3,22 @@ import styled from "styled-components";
 import { graphql } from "gatsby";
 import "../styles/fonts.scss";
 import Layout from "../components/Layout";
-import ENVISION from "../images/svg/ENVISION.svg";
-import HeroImage from "../images/herogradient.png";
-import Envision from "../images/ENVISION.png";
-import colors from "../styles/colors";
-import fonts from "../styles/font_names";
+
 import {
   AboutContainer,
   AboutHero,
   AboutHeroParagraph,
   AboutHeroText,
+  AboutPrinciples,
+  GuidingPrinciple,
+  GuidingPrincipleHeader,
+  GuidingPrinciples,
+  GuidingDescription,
   ParagraphColumn,
+  PrinciplesHeader,
+  PrinciplesSubHeader,
+  GuidingPrincipleImg,
+  GuidingPrincipleText,
 } from "../styles/About.styles";
 
 const AboutPage = ({ data }) => {
@@ -37,6 +42,31 @@ const AboutPage = ({ data }) => {
             ))}
           </AboutHeroParagraph>
         </AboutHero>
+        <AboutPrinciples>
+          <PrinciplesHeader>
+            {aboutQuery.guiding_principles_header}
+          </PrinciplesHeader>
+          <PrinciplesSubHeader>
+            {aboutQuery.guiding_principles_sub_header}
+          </PrinciplesSubHeader>
+          <GuidingPrinciples>
+            <div>
+              {aboutQuery.principles.map((principle, id) => (
+                <GuidingPrinciple key={id}>
+                  <GuidingPrincipleImg src={principle.principle_image.url} />
+                  <GuidingPrincipleText>
+                    <GuidingPrincipleHeader>
+                      {principle.principle_header}
+                    </GuidingPrincipleHeader>
+                    <GuidingDescription>
+                      {principle.principle_description.text}
+                    </GuidingDescription>
+                  </GuidingPrincipleText>
+                </GuidingPrinciple>
+              ))}
+            </div>
+          </GuidingPrinciples>
+        </AboutPrinciples>
       </AboutContainer>
     </Layout>
   );
@@ -49,6 +79,19 @@ export const about = graphql`
         about_header
         about_description {
           richText
+        }
+        guiding_principles_header
+        guiding_principles_sub_header
+        principles {
+          principle_description {
+            text
+            richText
+          }
+          principle_header
+          principle_image {
+            alt
+            url
+          }
         }
       }
     }
