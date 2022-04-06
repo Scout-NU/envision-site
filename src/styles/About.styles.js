@@ -24,7 +24,6 @@ export const ParagraphColumn = styled.div`
   margin-right: 62px;
   padding-bottom: 114px;
   font-weight: 300;
-
   font-size: ${fonts.BodySize};
 `;
 
@@ -33,7 +32,7 @@ export const AboutContainer = styled.div`
 `;
 
 export const AboutPrinciples = styled.div`
-margin-bottom: 314px;
+  margin-bottom: 314px;
 `;
 
 export const PrinciplesHeader = styled.div`
@@ -60,8 +59,7 @@ export const GuidingPrinciple = styled.div`
   width: 44vw;
   display: flex;
   justify-content: center;
-  
-  `
+`;
 
 export const HeroHeadline = styled.span`
   ${({ black }) =>
@@ -85,6 +83,5 @@ export const GuidingPrincipleImg = styled.img`
 `;
 
 export const GuidingPrincipleText = styled.div`
-margin-left: 57px;
-
-`
+  margin-left: 57px;
+`;
