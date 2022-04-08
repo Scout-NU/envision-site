@@ -53,7 +53,10 @@ const AboutPage = ({ data }) => {
             <div>
               {aboutQuery.principles.map((principle, id) => (
                 <GuidingPrinciple key={id}>
-                  <GuidingPrincipleImg src={principle.principle_image.url} />
+                  <GuidingPrincipleImg
+                    alt={principle.principle_image.alt}
+                    src={principle.principle_image.url}
+                  />
                   <GuidingPrincipleText>
                     <GuidingPrincipleHeader>
                       {principle.principle_header}
