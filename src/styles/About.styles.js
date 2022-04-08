@@ -118,6 +118,9 @@ export const TheSolution = styled.div`
 export const TheSolutionHeader = styled.div`
   font-size: ${fonts.NumberSmall};
   font-family: ${fonts.itc_avante_garde};
+  font-weight: 700;
+
+  
 `;
 
 export const TheSolutionDescription = styled.div`
