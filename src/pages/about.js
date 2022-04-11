@@ -38,11 +38,7 @@ const AboutPage = ({ data }) => {
       <AboutContainer>
         <AboutHero>
           <AboutHeroText>
-            {aboutQuery.about_header.split(" ").map((word, id) => (
-              <HeroHeadline key={id} black={id === 2}>
-                {word}{" "}
-              </HeroHeadline>
-            ))}
+            <HeroHeadline>{aboutQuery.about_header}</HeroHeadline>
           </AboutHeroText>
 
           <AboutHeroParagraph>

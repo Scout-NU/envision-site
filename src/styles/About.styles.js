@@ -62,8 +62,7 @@ export const GuidingPrinciple = styled.div`
 `;
 
 export const HeroHeadline = styled.span`
-  ${({ black }) =>
-    black ? `color: ${colors.black};` : `color: ${colors.black}`}
+  color: ${colors.black};
 `;
 export const GuidingPrincipleHeader = styled.div`
   font-family: ${fonts.space_mono};
@@ -119,8 +118,6 @@ export const TheSolutionHeader = styled.div`
   font-size: ${fonts.NumberSmall};
   font-family: ${fonts.itc_avante_garde};
   font-weight: 700;
-
-  
 `;
 
 export const TheSolutionDescription = styled.div`
