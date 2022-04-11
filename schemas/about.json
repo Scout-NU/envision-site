@@ -53,6 +53,32 @@
         },
         "label" : "Principles"
       }
+    },
+    "problem_header" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Problem Header"
+      }
+    },
+    "problem_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "label" : "Problem Description"
+      }
+    },
+    "solution_header" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Solution Header"
+      }
+    },
+    "solutions_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "label" : "Solutions Description"
+      }
     }
   }
 }

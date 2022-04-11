@@ -62,8 +62,7 @@ export const GuidingPrinciple = styled.div`
 `;
 
 export const HeroHeadline = styled.span`
-  ${({ black }) =>
-    black ? `color: ${colors.black};` : `color: ${colors.white}`}
+  color: ${colors.black};
 `;
 export const GuidingPrincipleHeader = styled.div`
   font-family: ${fonts.space_mono};
@@ -84,4 +83,63 @@ export const GuidingPrincipleImg = styled.img`
 
 export const GuidingPrincipleText = styled.div`
   margin-left: 57px;
+`;
+
+export const TheProblem = styled.div`
+  margin-left: 14vw;
+`;
+
+export const TheProblemHeader = styled.div`
+  font-size: ${fonts.NumberSmall};
+  font-family: ${fonts.itc_avante_garde};
+`;
+
+export const TheProblemDescription = styled.div`
+  margin-top: 34px;
+  font-size: ${fonts.BodySize};
+  font-family: ${fonts.itc_avante_garde};
+  width: 37vw;
+  font-weight: 300;
+`;
+
+export const SolutionWrapper = styled.div`
+  position: relative;
+  margin-bottom: 311px;
+`;
+
+export const TheSolution = styled.div`
+  position: absolute;
+  right: 11vw;
+  text-align: right;
+  width: 37vw;
+`;
+
+export const TheSolutionHeader = styled.div`
+  font-size: ${fonts.NumberSmall};
+  font-family: ${fonts.itc_avante_garde};
+  font-weight: 700;
+`;
+
+export const TheSolutionDescription = styled.div`
+  margin-top: 34px;
+  font-size: ${fonts.BodySize};
+  font-family: ${fonts.itc_avante_garde};
+  font-weight: 300;
+`;
+
+export const AboutCTA = styled.a`
+  background-color: ${colors.black};
+  color: ${colors.white};
+  font-family: ${fonts.space_mono};
+  font-size: ${fonts.BodySize};
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 30px 60px;
+`;
+
+export const AboutCTAContainer = styled.div`
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 109px;
 `;
