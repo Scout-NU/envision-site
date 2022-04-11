@@ -9,7 +9,8 @@ const fonts = {
     buttonSize: "1em",
     NumbersSize: "6em",
     NumberSmall: "3em",
-    BookSub: "1.5em"
+    BookSub: "1.5em",
+    SponsorsHeader: "2em"
   };
   
   export default fonts;

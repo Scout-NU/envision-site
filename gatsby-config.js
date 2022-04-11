@@ -18,6 +18,7 @@ module.exports = {
           about: require("./schemas/about.json"),
           portfolio: {},
           cohort: {},
+          partners_page: require("./schemas/partners.json")
         },
       },
     },
