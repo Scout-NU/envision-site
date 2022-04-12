@@ -6,6 +6,7 @@ const fonts = {
     LargeBook: "1.688em",
     Heading2Size: "3.75em",
     BodySize: "1.125em",
+    SpaceHeading2: "2.125em",
     buttonSize: "1em",
     NumbersSize: "6em",
     NumberSmall: "3em",

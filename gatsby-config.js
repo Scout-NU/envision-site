@@ -16,8 +16,9 @@ module.exports = {
         schemas: {
           homepage: require("./schemas/homepage.json"),
           about: require("./schemas/about.json"),
-          portfolio: {},
-          cohort: {},
+          portfolio: require("./schemas/portfolio.json"),
+          cohort: require("./schemas/cohort.json"),
+          partners_page: {}
         },
       },
     },
