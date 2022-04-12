@@ -26,7 +26,7 @@ export const PortfolioCTA = styled.a`
   font-size: ${fonts.buttonSize};
   background-color: ${colors.black};
   color: ${colors.white};
-  padding: 13px 28px 13px 28px;
+  padding: 13px 28px;
   text-decoration: none;
   border-radius: 10px;
 `;
@@ -64,20 +64,21 @@ export const CohortSection = styled.div`
   display: flex;
   justify-content: center;
 `;
+
 export const CohortList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 `;
 
 export const CohortButton = styled.div`
   background-color: ${colors.black};
   text-align: center;
   cursor: pointer;
-  padding: 29px 0px 29px 0px;
+  padding: 29px 0;
   margin-bottom: 19px;
   width: 27vw;
   margin-top: 30px;
+  margin-right: 1.66vw;
 `;
 
 export const CohortButtonHeader = styled.div`
@@ -98,13 +99,11 @@ export const CohortImages = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 86vw;
-  justify-content: space-between;
 `;
 
 export const MemberImage = styled.img`
   width: 27vw;
   height: 434px;
-
   object-fit: cover;
   margin-bottom: 30px;
 `;
@@ -113,6 +112,7 @@ export const MemberContainer = styled.div`
   position: relative;
   width: 27vw;
   height: 434px;
+  margin-right: 1.66vw;
 `;
 
 export const MemberText = styled.div`
@@ -125,7 +125,6 @@ export const MemberText = styled.div`
   width: 100%;
   width: 27vw;
   height: 434px;
-  position: absolute;
   background-color: rgb(0, 0, 0, 0.71);
   opacity: 0;
 

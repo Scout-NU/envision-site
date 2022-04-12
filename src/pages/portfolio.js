@@ -61,8 +61,7 @@ const Portfolio = ({ data }) => {
             {portfolio.cohorts[cohort].cohort.document.data.cohort_members.map(
               (member, id) => (
                 <MemberContainer key={id}>
-                  <MemberImage src={member.image.url} />
-
+                  <MemberImage alt={member.image.alt} src={member.image.url} />
                   <MemberText>
                     <MemberName>{member.name}</MemberName>
                     <MemberCompany>{member.company_title}</MemberCompany>
