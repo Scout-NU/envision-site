@@ -19,6 +19,15 @@ import {
   PrinciplesSubHeader,
   GuidingPrincipleImg,
   GuidingPrincipleText,
+  TheProblem,
+  TheProblemHeader,
+  TheProblemDescription,
+  TheSolution,
+  TheSolutionHeader,
+  TheSolutionDescription,
+  SolutionWrapper,
+  AboutCTA,
+  AboutCTAContainer,
 } from "../styles/About.styles";
 
 const AboutPage = ({ data }) => {
@@ -29,11 +38,7 @@ const AboutPage = ({ data }) => {
       <AboutContainer>
         <AboutHero>
           <AboutHeroText>
-            {aboutQuery.about_header.split(" ").map((word, id) => (
-              <HeroHeadline key={id} black={id === 2}>
-                {word}{" "}
-              </HeroHeadline>
-            ))}
+            <HeroHeadline>{aboutQuery.about_header}</HeroHeadline>
           </AboutHeroText>
 
           <AboutHeroParagraph>
@@ -70,6 +75,26 @@ const AboutPage = ({ data }) => {
             </div>
           </GuidingPrinciples>
         </AboutPrinciples>
+
+        <TheProblem>
+          <TheProblemHeader>{aboutQuery.problem_header}</TheProblemHeader>
+          <TheProblemDescription>
+            {aboutQuery.problem_description.text}
+          </TheProblemDescription>
+        </TheProblem>
+
+        <SolutionWrapper>
+          <TheSolution>
+            <TheSolutionHeader>{aboutQuery.solution_header}</TheSolutionHeader>
+
+            <TheSolutionDescription>
+              {aboutQuery.solutions_description.text}
+            </TheSolutionDescription>
+          </TheSolution>
+        </SolutionWrapper>
+        <AboutCTAContainer>
+          <AboutCTA href="/">BECOME A MENTOR</AboutCTA>
+        </AboutCTAContainer>
       </AboutContainer>
     </Layout>
   );
@@ -95,6 +120,14 @@ export const about = graphql`
             alt
             url
           }
+        }
+        solution_header
+        problem_header
+        problem_description {
+          text
+        }
+        solutions_description {
+          text
         }
       }
     }
