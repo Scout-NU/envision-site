@@ -1,0 +1,38 @@
+{
+    "Main" : {
+      "accelerator_header" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Accelerator Header"
+        }
+      },
+      "accelerator_info" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "icon" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Icon"
+              }
+            },
+            "info_header" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Info Header"
+              }
+            },
+            "info_description" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Info Description"
+              }
+            }
+          },
+          "label" : "Accelerator Info"
+        }
+      }
+    }
+  }

@@ -9,11 +9,13 @@ export const BackgroundColor = styled.div`
 export const HeaderContainer = styled.div`
   font-family: ${fonts.space_mono}, monospace;
   font-size: ${fonts.buttonSize};
-  position: relative;
-  padding-top: 131px;
-  padding-bottom: 57px;
+  position: fixed;
+  padding-top: 47px;
+  padding-bottom: 47px;
+  top: 0;
+  width: 100%;
 
-  margin-left: 6vw;
+  padding-left: 6vw;
   color: ${colors.white};
   background-color: ${colors.black};
 `;

@@ -10,7 +10,8 @@ const fonts = {
     buttonSize: "1em",
     NumbersSize: "6em",
     NumberSmall: "3em",
-    BookSub: "1.5em"
+    BookSub: "1.5em",
+    InfoHeader: "2em"
   };
   
   export default fonts;
