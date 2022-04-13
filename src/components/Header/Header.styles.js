@@ -44,6 +44,8 @@ export const NavLinks = styled.ul`
   align-items: center;
 `;
 
-export const NavLink = styled.div`
+export const NavLink = styled.a`
   margin-right: 48px;
+  text-decoration: none;
+  color: ${colors.white};
 `;
