@@ -19,7 +19,10 @@ module.exports = {
           portfolio: require("./schemas/portfolio.json"),
           cohort: require("./schemas/cohort.json"),
           partners_page: {},
+          apply: {},
+          team_page: {},
           accelerator: require("./schemas/accelerator.json")
+          
         },
       },
     },
