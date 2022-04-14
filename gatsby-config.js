@@ -21,8 +21,7 @@ module.exports = {
           partners_page: {},
           accelerator: {},
           apply: require("./schemas/apply.json"),
-          team_page: {}
-
+          team_page: {},
         },
       },
     },
