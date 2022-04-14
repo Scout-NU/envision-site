@@ -14,8 +14,6 @@ import {
   FAQs,
   HeaderText,
   ListItem,
-  QuestionText,
-  QuestionAnswer,
   Testimonial,
   TestimonialImage,
   TestimonialText,
@@ -30,7 +28,10 @@ const Apply = ({ data }) => {
       <ApplyHeader>
         <HeaderText>{applyQuery.apply_header}</HeaderText>
         <Testimonial>
-          <TestimonialImage src={applyQuery.testimonial_image.url} />
+          <TestimonialImage
+            alt={applyQuery.testimonial_image.alt}
+            src={applyQuery.testimonial_image.url}
+          />
           <TestimonialText>{applyQuery.testimonial_text}</TestimonialText>
         </Testimonial>
       </ApplyHeader>
@@ -44,7 +45,7 @@ const Apply = ({ data }) => {
           {applyQuery.characteristics.map((item, idx) => (
             <CharacteristicItem key={idx}>
               {item.characteristic.richText.map((li, idx) => (
-                <ListItem>{li.text}</ListItem>
+                <ListItem key={idx}>{li.text}</ListItem>
               ))}
             </CharacteristicItem>
           ))}
@@ -54,9 +55,7 @@ const Apply = ({ data }) => {
           <a href={`/${applyQuery.cta_destination}`}>{applyQuery.apply_cta}</a>
         </ApplyCTA>
       </Characteristics>
-      <FAQHeader>
-      FREQUENTLY ASKED QUESTIONS
-      </FAQHeader>
+      <FAQHeader>FREQUENTLY ASKED QUESTIONS</FAQHeader>
 
       <FAQs>
         {applyQuery.faqs.map((question, idx) => (

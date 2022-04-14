@@ -8,7 +8,9 @@ export default function Question({ question }) {
 
   return (
     <QuestionAnswer onClick={() => setShowQuestion(!showQuestion)}>
-      <QuestionText>{question.question} <img src={Arrow} /> </QuestionText>
+      <QuestionText>
+        {question.question} <img alt="FAQ dropdown arrow icon" src={Arrow} />
+      </QuestionText>
       <Answer className={showQuestion ? "shown" : ""}>{question.answer}</Answer>
     </QuestionAnswer>
   );

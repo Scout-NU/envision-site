@@ -82,7 +82,10 @@ export const FAQs = styled.div`
   margin-bottom: 211px;
 `;
 
-export const QuestionAnswer = styled.div``;
+export const QuestionAnswer = styled.div`
+cursor: pointer;
+
+`;
 
 export const QuestionText = styled.div`
   font-size: ${fonts.QuestionText};
