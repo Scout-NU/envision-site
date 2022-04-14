@@ -73,7 +73,6 @@ export const ResourceLink = styled.a`
   padding-top: 17px;
   padding-bottom: 17px;
   padding-left: 200px;
-
   display: flex;
   img {
     width: 40px;
@@ -108,7 +107,7 @@ export const CTALink = styled.a`
   font-family: ${fonts.space_mono};
   color: ${colors.black};
   background-color: ${colors.orange};
-  padding: 15px 20px 15px 20px;
+  padding: 15px 20px;
   border-radius: 17px;
 `;
 

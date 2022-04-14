@@ -4,7 +4,6 @@ import fonts from "../../styles/font_names";
 
 export const BackgroundColor = styled.div`
   background-color: ${colors.black};
-  
 `;
 
 export const HeaderContainer = styled.div`
