@@ -11,7 +11,8 @@ const fonts = {
     NumbersSize: "6em",
     NumberSmall: "3em",
     BookSub: "1.5em",
-    InfoHeader: "2em"
+    InfoHeader: "2em",
+    QuestionText: "1.313em"
   };
   
   export default fonts;
