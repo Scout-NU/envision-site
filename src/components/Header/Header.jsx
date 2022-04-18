@@ -11,10 +11,10 @@ export default function Header() {
           <Logo>ENVISION</Logo>
 
           <NavLinks>
-            <NavLink>About</NavLink>
-            <NavLink>Portfolio</NavLink>
-            <NavLink>Partners</NavLink>
-            <NavLink>Accelerator</NavLink>
+            <NavLink href="/about">About</NavLink>
+            <NavLink href="/portfolio">Portfolio</NavLink>
+            <NavLink href="/partners">Partners</NavLink>
+            <NavLink href="/accelerator">Accelerator</NavLink>
 
             <NavCTA>Apply Now</NavCTA>
           </NavLinks>
