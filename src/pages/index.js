@@ -4,6 +4,8 @@ import "../styles/fonts.scss";
 import Layout from "../components/Layout";
 import Envision from "../images/ENVISION.png";
 import MobileImage from "../images/mobileimage.png";
+import VentureCard from "../components/VentureCard/VentureCard";
+import { Carousel } from "@trendyol-js/react-carousel";
 import {
   HeroContainer,
   HeroContent,
@@ -13,6 +15,7 @@ import {
   MissionTitle,
   MissionCTA,
   CTASection,
+  CarouselSection,
   ByTheNumbers,
   ByTheNumbersHeader,
   Numbers,
@@ -60,6 +63,13 @@ const IndexPage = ({ data }) => {
           </MissionDescription>
         </MissionSection>
       </HeroContainer>
+      <CarouselSection>
+        <Carousel className="carousel" show={1.2} slide={1} swiping={true}>
+          {homepageQuery.venture.map((object, i) => (
+            <VentureCard venture={object} key={i} />
+          ))}
+        </Carousel>
+      </CarouselSection>
 
       <ByTheNumbers>
         <ByTheNumbersHeader>{homepageQuery.numbers_header}</ByTheNumbersHeader>
@@ -99,6 +109,17 @@ export const homepage = graphql`
   query HomeQuery {
     prismicHomepage {
       data {
+        venture {
+          money_raised
+          venture_description {
+            text
+          }
+          venture_image {
+            url
+          }
+          venture_title
+          venture_name
+        }
         hero_description {
           text
         }

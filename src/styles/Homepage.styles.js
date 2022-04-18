@@ -124,6 +124,28 @@ export const CTASection = styled.div`
   margin-bottom: 185px;
 `;
 
+export const CarouselSection = styled.div`
+  width: 100vw;
+  padding-top: 68px;
+  padding-bottom: 68px;
+  border-top: solid 1px #ffffff;
+  border-bottom: solid 1px #ffffff;
+  background-color: ${colors.black};
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  button {
+    dispay: none;
+  }
+
+  .styles-module_carousel-arrow__26sRw {
+    display: none;
+  }
+
+  .carousel {
+    width: 70vw;
+  }`
 export const ByTheNumbers = styled.div`
   background-color: ${colors.white};
 `;

@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@prismicio/react": "^2.0.6",
+    "@trendyol-js/react-carousel": "^2.0.1",
     "babel-plugin-styled-components": "^2.0.3",
     "dotenv": "^16.0.0",
     "gatsby": "^4.7.2",
