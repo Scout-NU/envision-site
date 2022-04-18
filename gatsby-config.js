@@ -22,7 +22,6 @@ module.exports = {
           team_page: require("./schemas/team_page.json"),
           accelerator: require("./schemas/accelerator.json"),
           apply: require("./schemas/apply.json"),
-          team_page: {},
         },
       },
     },
