@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import "../styles/fonts.scss";
 import Layout from "../components/Layout";
 import Envision from "../images/ENVISION.png";
+import MobileImage from "../images/mobileimage.png";
 import {
   HeroContainer,
   HeroContent,
@@ -18,12 +19,13 @@ import {
   Number,
   NumberText,
   NumberDescription,
-  SupporterImagesSection,
-  SupporterImages,
-  SupporterImage,
   HomeCTAs,
   HomeCTA,
+  SmallLogo,
+  DownIcon,
+  NumberContent,
 } from "../styles/Homepage.styles";
+import DownArrow from "../images/downarrow.png";
 
 const IndexPage = ({ data }) => {
   const homepageQuery = data.prismicHomepage.data;
@@ -31,10 +33,19 @@ const IndexPage = ({ data }) => {
     <Layout>
       <HeroContainer>
         <HeroContent>
+          <div>
           <img alt="Envision" src={Envision} />
+          <SmallLogo alt="Envision" src={MobileImage} />
+
           <HeroDescription>
             {homepageQuery.hero_description.text}
           </HeroDescription>
+
+
+          <DownIcon>
+            <img src={DownArrow} />
+            </DownIcon>
+          </div>
         </HeroContent>
 
         <MissionSection>
@@ -56,7 +67,7 @@ const IndexPage = ({ data }) => {
         <Numbers>
           {homepageQuery.numbers.map((object, i) => (
             <Number key={i}>
-              <div>
+              <NumberContent>
                 <NumberText>
                   {object.number.split(" ").length > 1 ? (
                     <div>
@@ -70,23 +81,11 @@ const IndexPage = ({ data }) => {
                 <NumberDescription>
                   {object.number_description}
                 </NumberDescription>
-              </div>
+              </NumberContent>
             </Number>
           ))}
         </Numbers>
       </ByTheNumbers>
-
-      <SupporterImagesSection>
-        <SupporterImages>
-          {homepageQuery.supporter_images.map((image, id) => (
-            <SupporterImage
-              key={id}
-              alt={image.image.alt}
-              src={image.image.url}
-            />
-          ))}
-        </SupporterImages>
-      </SupporterImagesSection>
 
       <HomeCTAs>
         <HomeCTA href="/">BECOME A MENTOR</HomeCTA>

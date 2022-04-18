@@ -1,5 +1,14 @@
 import React from "react";
-import { BackgroundColor, HeaderContainer, Logo,NavSection, NavCTA, NavLinks, NavLink } from "./Header.styles";
+import {
+  BackgroundColor,
+  HeaderContainer,
+  Logo,
+  NavSection,
+  NavCTA,
+  NavLinks,
+  NavLink,
+  HamburgerMenu
+} from "./Header.styles";
 
 
 
@@ -8,16 +17,20 @@ export default function Header() {
     <BackgroundColor>
       <HeaderContainer>
         <NavSection>
-          <Logo>ENVISION</Logo>
+          <Logo href="/">ENVISION</Logo>
 
           <NavLinks>
-            <NavLink>About</NavLink>
-            <NavLink>Portfolio</NavLink>
-            <NavLink>Partners</NavLink>
-            <NavLink>Accelerator</NavLink>
+            <NavLink href="/about">About</NavLink>
+            <NavLink href="/portfolio">Portfolio</NavLink>
+            <NavLink href="/partners">Partners</NavLink>
+            <NavLink href="/accelerator">Accelerator</NavLink>
 
-            <NavCTA>Apply Now</NavCTA>
+            <NavCTA href="/apply">Apply Now</NavCTA>
           </NavLinks>
+
+          <HamburgerMenu>
+
+          </HamburgerMenu>
         </NavSection>
       </HeaderContainer>
     </BackgroundColor>

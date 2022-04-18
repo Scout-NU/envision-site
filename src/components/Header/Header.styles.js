@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import colors from "../../styles/colors";
 import fonts from "../../styles/font_names";
+import dimensions from "../../styles/dimensions";
 
 export const BackgroundColor = styled.div`
   background-color: ${colors.black};
@@ -20,9 +21,11 @@ export const HeaderContainer = styled.div`
   background-color: ${colors.black};
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.a`
   position: absolute;
   background-color: ${colors.black};
+  text-decoration: none;
+  color: ${colors.white};
 `;
 
 export const NavSection = styled.div`
@@ -30,10 +33,12 @@ export const NavSection = styled.div`
   width: 100vw;
 `;
 
-export const NavCTA = styled.div`
+export const NavCTA = styled.a`
   padding: 13px 15px 13px 15px;
   border: solid 1px;
   border-radius: 10px;
+  text-decoration: none;
+  color: ${colors.white};
 `;
 
 export const NavLinks = styled.ul`
@@ -44,8 +49,20 @@ export const NavLinks = styled.ul`
   padding: 0px;
   background-color: ${colors.black};
   align-items: center;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    display: none;
+  }
 `;
 
-export const NavLink = styled.div`
+export const HamburgerMenu = styled.div`
+
+`
+
+export const NavLink = styled.a`
   margin-right: 48px;
+  text-decoration: none;
+  color: ${colors.white};
+
+
 `;
+
