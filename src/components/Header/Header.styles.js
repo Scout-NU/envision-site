@@ -9,11 +9,13 @@ export const BackgroundColor = styled.div`
 export const HeaderContainer = styled.div`
   font-family: ${fonts.space_mono}, monospace;
   font-size: ${fonts.buttonSize};
-  position: relative;
-  padding-top: 131px;
-  padding-bottom: 57px;
-
-  margin-left: 6vw;
+  position: fixed;
+  z-index: 1;
+  padding-top: 47px;
+  padding-bottom: 47px;
+  top: 0;
+  width: 100%;
+  padding-left: 6vw;
   color: ${colors.white};
   background-color: ${colors.black};
 `;
@@ -37,7 +39,7 @@ export const NavCTA = styled.div`
 export const NavLinks = styled.ul`
   display: flex;
   position: absolute;
-  right: 6vw;
+  right: 12vw;
   margin-top: -13px;
   padding: 0px;
   background-color: ${colors.black};
