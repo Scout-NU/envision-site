@@ -30,8 +30,6 @@ export const TeamImage = styled.img`
   object-fit: cover;
   width: 434px;
   height: 401px;
-  //   margin-left: 19px;
-  //   margin-bottom: 30px;
 `;
 
 export const MemberText = styled.div`
@@ -48,7 +46,7 @@ export const MemberText = styled.div`
   opacity: 0;
 
   &:hover {
-    opacity: 255;
+    opacity: 1;
   }
 `;
 

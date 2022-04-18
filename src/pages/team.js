@@ -22,8 +22,7 @@ export default function Team({ data }) {
       <TeamMembers>
         {teamQuery.team_members.map((member, idx) => (
           <TeamMember key={idx}>
-            {console.log(member)}
-            <TeamImage src={member.team_image.url} />
+            <TeamImage alt={member.alt} src={member.team_image.url} />
             <MemberText>
               <MemberName>{member.team_name}</MemberName>
               <MemberSub>
