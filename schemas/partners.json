@@ -1,0 +1,175 @@
+{
+    "Main" : {
+      "partners_headline" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Partners Headline"
+        }
+      },
+      "partners_description" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph",
+          "label" : "Partners Description"
+        }
+      },
+      "sponsors_headline" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Sponsors Headline"
+        }
+      },
+      "sponsors_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "sponsors description"
+        }
+      },
+      "our_sponsors" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "sponsor_image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "sponsor image"
+              }
+            }
+          },
+          "label" : "Our Sponsors"
+        }
+      },
+      "past_sponsors_headline" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Past Sponsors Headline"
+        }
+      },
+      "past_sponsors_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Past Sponsors Description"
+        }
+      },
+      "past_sponsors" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "past_sponsors_image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Past Sponsors image"
+              }
+            }
+          },
+          "label" : "Past Sponsors"
+        }
+      },
+      "allies_headline" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Allies Headline"
+        }
+      },
+      "allies_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Allies Description"
+        }
+      },
+      "allies_images" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "allies_image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Allies image"
+              }
+            }
+          },
+          "label" : "Allies Images"
+        }
+      },
+      "resource_partners" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Resource Partners Headline"
+        }
+      },
+      "resource_partners_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Resource Partners Description"
+        }
+      },
+      "resource_images" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "resource_image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Resource image"
+              }
+            }
+          },
+          "label" : "Resource Images"
+        }
+      },
+      "mentor_header" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Mentor Header"
+        }
+      },
+      "mentor_description" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Mentor Description"
+        }
+      },
+      "mentor_images" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "mentor_image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Mentor Image"
+              }
+            }
+          },
+          "label" : "Mentor Images"
+        }
+      },
+      "partners_cta_header" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Partners CTA Header"
+        }
+      },
+      "cta_text" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "cta text"
+        }
+      },
+      "cta_destination" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "cta destination"
+        }
+      }
+    }
+  }

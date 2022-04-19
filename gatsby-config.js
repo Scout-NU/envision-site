@@ -18,7 +18,7 @@ module.exports = {
           about: require("./schemas/about.json"),
           portfolio: require("./schemas/portfolio.json"),
           cohort: require("./schemas/cohort.json"),
-          partners_page: {},
+          partners_page: require("./schemas/partners.json"),
           team_page: require("./schemas/team_page.json"),
           accelerator: require("./schemas/accelerator.json"),
           apply: require("./schemas/apply.json"),
