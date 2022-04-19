@@ -43,10 +43,16 @@ export const SponsorsDescription = styled.div`
 `;
 
 export const SponsorImage = styled.img`
-  width: 243px;
-  height: 172px;
+  // width: 243px;
+  // height: 172px;
   margin-top: 27px;
+  margin-left: 42px;
   margin-bottom: 27px;
+`;
+
+export const TickerImages = styled.div`
+  display: flex;
+  flex-wrap: no-wrap;
 `;
 
 export const SponsorCarousel = styled.div`
@@ -54,10 +60,7 @@ export const SponsorCarousel = styled.div`
   margin-top: 23px;
   width: 86vw;
   border-radius: 0px 24px 24px 24px;
-
-  button {
-    display: none;
-  }
+  height: 225px;
 `;
 
 export const PartnersCTA = styled.div`
@@ -76,7 +79,6 @@ export const CTAHeader = styled.div`
   text-align: center;
   padding-top: 220px;
   margin-bottom: 81px;
-
 `;
 
 export const CTALink = styled.a`
@@ -91,8 +93,7 @@ export const CTALink = styled.a`
 `;
 
 export const CTAAlign = styled.div`
-display: flex;
-justify-content: center;
-margin-bottom: 94px;
-
-`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 94px;
+`;

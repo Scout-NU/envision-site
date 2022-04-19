@@ -15,7 +15,9 @@ import {
   CTAHeader,
   CTALink,
   CTAAlign,
+  TickerImages,
 } from "../styles/Partners.styles";
+import Ticker from "react-ticker";
 import { Carousel } from "@trendyol-js/react-carousel";
 
 const PartnersPage = ({ data }) => {
@@ -38,11 +40,18 @@ const PartnersPage = ({ data }) => {
           {partnersQuery.sponsors_description}
         </SponsorsDescription>
         <SponsorCarousel>
-          <Carousel className="carousel" show={4.5} slide={1} swiping={true}>
-            {partnersQuery.our_sponsors.map((image, idx) => (
-              <SponsorImage key={idx} src={image.sponsor_image.url} />
-            ))}
-          </Carousel>
+          <Ticker speed={10} offset={0}>
+            {({ index }) => (
+              <TickerImages>
+                {partnersQuery.our_sponsors.map((image, idx) => (
+                  <>
+                    <SponsorImage key={idx} src={image.sponsor_image.url} />
+                    {index}
+                  </>
+                ))}
+              </TickerImages>
+            )}
+          </Ticker>
         </SponsorCarousel>
 
         <SponsorsHeadline>
@@ -53,30 +62,46 @@ const PartnersPage = ({ data }) => {
           {partnersQuery.past_sponsors_description}
         </SponsorsDescription>
         <SponsorCarousel>
-          <Carousel className="carousel" show={4.5} slide={1} swiping={true}>
-            {partnersQuery.past_sponsors.map((image, idx) => (
-              <SponsorImage
-                key={idx}
-                alt={image.past_sponsors_image.alt}
-                src={image.past_sponsors_image.url}
-              />
-            ))}
-          </Carousel>
+          <Ticker speed={10} offset={0}>
+            {({ index }) => (
+              <TickerImages>
+                {" "}
+                {partnersQuery.past_sponsors.map((image, idx) => (
+                  <>
+                    <SponsorImage
+                      key={idx}
+                      alt={image.past_sponsors_image.alt}
+                      src={image.past_sponsors_image.url}
+                    />
+                    {index}
+                  </>
+                ))}
+              </TickerImages>
+            )}
+          </Ticker>{" "}
         </SponsorCarousel>
         <SponsorsHeadline> {partnersQuery.allies_headline}</SponsorsHeadline>
         <SponsorsDescription>
           {partnersQuery.allies_description}
         </SponsorsDescription>
         <SponsorCarousel>
-          <Carousel className="carousel" show={4.5} slide={1} swiping={true}>
-            {partnersQuery.allies_images.map((image, idx) => (
-              <SponsorImage
-                key={idx}
-                alt={image.allies_image.alt}
-                src={image.allies_image.url}
-              />
-            ))}
-          </Carousel>
+          <Ticker speed={10} offset={0}>
+            {({ index }) => (
+              <TickerImages>
+                {" "}
+                {partnersQuery.allies_images.map((image, idx) => (
+                  <>
+                    <SponsorImage
+                      key={idx}
+                      alt={image.allies_image.alt}
+                      src={image.allies_image.url}
+                    />
+                    {index}
+                  </>
+                ))}
+              </TickerImages>
+            )}
+          </Ticker>{" "}
         </SponsorCarousel>
 
         <SponsorsHeadline> {partnersQuery.resource_partners}</SponsorsHeadline>
@@ -84,15 +109,23 @@ const PartnersPage = ({ data }) => {
           {partnersQuery.resource_partners_description}
         </SponsorsDescription>
         <SponsorCarousel>
-          <Carousel className="carousel" show={4.5} slide={1} swiping={true}>
-            {partnersQuery.resource_images.map((image, idx) => (
-              <SponsorImage
-                key={idx}
-                alt={image.resource_image.alt}
-                src={image.resource_image.url}
-              />
-            ))}
-          </Carousel>
+          <Ticker speed={10} offset={0}>
+            {({ index }) => (
+              <TickerImages>
+                {" "}
+                {partnersQuery.resource_images.map((image, idx) => (
+                  <>
+                    <SponsorImage
+                      key={idx}
+                      alt={image.resource_image.alt}
+                      src={image.resource_image.url}
+                    />
+                    {index}
+                  </>
+                ))}
+              </TickerImages>
+            )}
+          </Ticker>{" "}
         </SponsorCarousel>
 
         <SponsorsHeadline> {partnersQuery.mentor_header}</SponsorsHeadline>
@@ -100,15 +133,23 @@ const PartnersPage = ({ data }) => {
           {partnersQuery.mentor_description}
         </SponsorsDescription>
         <SponsorCarousel>
-          <Carousel className="carousel" show={4.5} slide={1} swiping={true}>
-            {partnersQuery.mentor_images.map((image, idx) => (
-              <SponsorImage
-                key={idx}
-                alt={image.mentor_image.alt}
-                src={image.mentor_image.url}
-              />
-            ))}
-          </Carousel>
+          <Ticker speed={10} offset={0}>
+            {({ index }) => (
+              <TickerImages>
+                {" "}
+                {partnersQuery.mentor_images.map((image, idx) => (
+                  <>
+                    <SponsorImage
+                      key={idx}
+                      alt={image.mentor_image.alt}
+                      src={image.mentor_image.url}
+                    />
+                    {index}
+                  </>
+                ))}
+              </TickerImages>
+            )}
+          </Ticker>{" "}
         </SponsorCarousel>
       </SponsorSection>
 
