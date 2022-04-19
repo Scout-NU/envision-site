@@ -63,13 +63,13 @@ const IndexPage = ({ data }) => {
           </MissionDescription>
         </MissionSection>
       </HeroContainer>
-      <CarouselSection>
+      {/* <CarouselSection>
         <Carousel className="carousel" show={1.2} slide={1} swiping={true}>
           {homepageQuery.venture.map((object, i) => (
             <VentureCard venture={object} key={i} />
           ))}
         </Carousel>
-      </CarouselSection>
+      </CarouselSection> */}
 
       <ByTheNumbers>
         <ByTheNumbersHeader>{homepageQuery.numbers_header}</ByTheNumbersHeader>

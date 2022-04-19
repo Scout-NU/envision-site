@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
+import dimensions from "../styles/dimensions";
 
 export const AboutHero = styled.div`
   margin-left: 14vw;
   padding-top: 115px;
   font-family: ${fonts.itc_avante_garde};
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-left: 20px;
+  }
 `;
 
 export const AboutHeroText = styled.div`
@@ -16,6 +20,13 @@ export const AboutHeroText = styled.div`
 
 export const AboutHeroParagraph = styled.div`
   display: flex;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    display: block;
+    padding-bottom: 114px;
+
+
+  }
 `;
 
 export const ParagraphColumn = styled.div`
@@ -25,6 +36,14 @@ export const ParagraphColumn = styled.div`
   padding-bottom: 114px;
   font-weight: 300;
   font-size: ${fonts.BodySize};
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 335px;
+    padding-bottom: 44px;
+
+
+
+  }
 `;
 
 export const AboutContainer = styled.div`
@@ -59,6 +78,11 @@ export const GuidingPrinciple = styled.div`
   width: 44vw;
   display: flex;
   justify-content: center;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 80vw;
+  }
+  
 `;
 
 export const HeroHeadline = styled.span`
@@ -86,7 +110,7 @@ export const GuidingPrincipleText = styled.div`
 `;
 
 export const TheProblem = styled.div`
-  margin-left: 14vw;
+  margin-left: 20px;;
 `;
 
 export const TheProblemHeader = styled.div`
@@ -100,6 +124,11 @@ export const TheProblemDescription = styled.div`
   font-family: ${fonts.itc_avante_garde};
   width: 37vw;
   font-weight: 300;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 80vw;
+    margin-bottom: 100px;
+  }
 `;
 
 export const SolutionWrapper = styled.div`
@@ -112,6 +141,14 @@ export const TheSolution = styled.div`
   right: 11vw;
   text-align: right;
   width: 37vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    text-align: left;
+    position: relative;
+    width: 80vw;
+    right: 0;
+    padding-left: 20px;
+  }
 `;
 
 export const TheSolutionHeader = styled.div`

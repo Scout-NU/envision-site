@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
-import Ellipse from "../images/ellipse.png";
 import dimensions from "../styles/dimensions";
 
 export const HeroContainer = styled.div`
