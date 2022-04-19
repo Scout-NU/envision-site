@@ -24,8 +24,6 @@ export const AboutHeroParagraph = styled.div`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     display: block;
     padding-bottom: 114px;
-
-
   }
 `;
 
@@ -40,9 +38,6 @@ export const ParagraphColumn = styled.div`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 335px;
     padding-bottom: 44px;
-
-
-
   }
 `;
 
@@ -82,7 +77,6 @@ export const GuidingPrinciple = styled.div`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 80vw;
   }
-  
 `;
 
 export const HeroHeadline = styled.span`
@@ -110,7 +104,12 @@ export const GuidingPrincipleText = styled.div`
 `;
 
 export const TheProblem = styled.div`
-  margin-left: 20px;;
+  margin-left: 14vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+\  margin-left: 20px;
+
+  }
 `;
 
 export const TheProblemHeader = styled.div`
