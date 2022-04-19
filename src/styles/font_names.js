@@ -2,7 +2,7 @@ const fonts = {
     // primary
     space_mono: "Space Mono",
     itc_avante_garde: "itc-avant-garde-gothic-pro",
-    footerSizeDesktop: 1.25,
+    footerSizeDesktop: "1.25em",
     LargeBook: "1.688em",
     Heading2Size: "3.75em",
     BodySize: "1.125em",
@@ -12,6 +12,7 @@ const fonts = {
     NumbersLarge: "12.5em",
     NumberSmall: "3em",
     BookSub: "1.5em",
+    SponsorsHeader: "2em",
     InfoHeader: "2em",
     subMobile: "2.5em",
     QuestionText: "1.313em",

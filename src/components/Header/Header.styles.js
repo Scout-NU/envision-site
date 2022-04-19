@@ -54,15 +54,8 @@ export const NavLinks = styled.ul`
   }
 `;
 
-export const HamburgerMenu = styled.div`
-
-`
-
 export const NavLink = styled.a`
   margin-right: 48px;
   text-decoration: none;
   color: ${colors.white};
-
-
 `;
-
