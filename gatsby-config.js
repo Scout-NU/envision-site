@@ -16,11 +16,12 @@ module.exports = {
         schemas: {
           homepage: require("./schemas/homepage.json"),
           about: require("./schemas/about.json"),
-          portfolio: {},
-          cohort: {},
+          portfolio: require("./schemas/portfolio.json"),
+          cohort: require("./schemas/cohort.json"),
           partners_page: require("./schemas/partners.json"),
-          accelerator: {}
-
+          team_page: require("./schemas/team_page.json"),
+          accelerator: require("./schemas/accelerator.json"),
+          apply: require("./schemas/apply.json"),
         },
       },
     },

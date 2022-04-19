@@ -1,0 +1,50 @@
+{
+    "Main" : {
+      "cohort_title" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Cohort Title"
+        }
+      },
+      "cohort_date" : {
+        "type" : "Text",
+        "config" : {
+          "label" : "Cohort Date"
+        }
+      },
+      "cohort_members" : {
+        "type" : "Group",
+        "config" : {
+          "fields" : {
+            "image" : {
+              "type" : "Image",
+              "config" : {
+                "constraint" : { },
+                "thumbnails" : [ ],
+                "label" : "Image"
+              }
+            },
+            "name" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Name"
+              }
+            },
+            "company_title" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Company Title"
+              }
+            },
+            "description" : {
+              "type" : "Text",
+              "config" : {
+                "label" : "Description"
+              }
+            }
+          },
+          "label" : "Cohort Members"
+        }
+      }
+    }
+  }
