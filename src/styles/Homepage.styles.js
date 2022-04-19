@@ -135,12 +135,10 @@ export const CarouselSection = styled.div`
   justify-content: center;
   align-content: center;
 
-  button {
-    dispay: none;
-  }
+
 
   .styles-module_carousel-arrow__26sRw {
-    display: none;
+    // display: none;
   }
 
   .carousel {

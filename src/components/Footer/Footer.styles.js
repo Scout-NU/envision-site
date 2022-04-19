@@ -64,6 +64,7 @@ display: none;
 @media (max-width: ${dimensions.maxwidthTablet}px) {
   display: initial;
   width: 127px !important;
+  margin-bottom: 18px;
 }
 
 `
