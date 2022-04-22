@@ -28,7 +28,7 @@ import {
 const IndexPage = ({ data }) => {
   const homepageQuery = data.prismicHomepage.data;
   return (
-    <Layout>
+    <Layout headerMode='transparent'>
       <HeroContainer>
         <HeroContent>
           <img alt="Envision" src={Envision} />

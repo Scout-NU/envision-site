@@ -1,13 +1,17 @@
 import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
+import PortfolioGradient from "../images/portfolio-gradient.png";
 
-export const PortfolioContainer = styled.div``;
+export const PortfolioContainer = styled.div`
+  background: url(${PortfolioGradient}) center no-repeat;
+  background-size: cover;
+`;
 
 export const PortfolioHeader = styled.div`
   font-size: ${fonts.Heading2Size};
   font-family: ${fonts.itc_avante_garde};
-  margin-top: 197px;
+  padding-top: 197px;
   margin-left: 14vw;
   font-weight: 700;
 `;
@@ -38,7 +42,7 @@ export const PortfolioCTAWrapper = styled.div`
 `;
 
 export const CohortHeader = styled.div`
-  width: 86vw;
+  width: 84.4vw;
   text-align: center;
   background-color: ${colors.black};
   padding-top: 29px;
@@ -105,7 +109,6 @@ export const MemberImage = styled.img`
   width: 27vw;
   height: 434px;
   object-fit: cover;
-  margin-bottom: 30px;
 `;
 
 export const MemberContainer = styled.div`
@@ -113,6 +116,7 @@ export const MemberContainer = styled.div`
   width: 27vw;
   height: 434px;
   margin-right: 1.66vw;
+  margin-bottom: 25px;
 `;
 
 export const MemberText = styled.div`
