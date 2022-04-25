@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
+import dimensions from "../styles/dimensions";
 
 export const PortfolioContainer = styled.div``;
 
@@ -106,6 +107,10 @@ export const MemberImage = styled.img`
   height: 434px;
   object-fit: cover;
   margin-bottom: 30px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    height: 151px;
+  }
 `;
 
 export const MemberContainer = styled.div`
@@ -113,6 +118,11 @@ export const MemberContainer = styled.div`
   width: 27vw;
   height: 434px;
   margin-right: 1.66vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    height: 151px;
+
+  }
 `;
 
 export const MemberText = styled.div`
@@ -130,6 +140,11 @@ export const MemberText = styled.div`
 
   &:hover {
     opacity: 255;
+  }
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    height: 151px;
+
   }
 `;
 

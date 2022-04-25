@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState, useEffect, useWindowWidth } from "react";
 import { graphql } from "gatsby";
 import "../styles/fonts.scss";
 import Layout from "../components/Layout";
@@ -19,10 +20,37 @@ import {
   AcceleratorCTA,
 } from "../styles/Accelerator.styles";
 import Ticker from "react-ticker";
+import Training from "../svg/training.svg";
 import ResourceArrow from "../images/resourcelink.png";
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+}
 
 const Accelerator = ({ data }) => {
   const acceleratorQuery = data.prismicAccelerator.data;
+  const { height, width } = useWindowDimensions();
+
+
 
   return (
     <Layout>
@@ -33,7 +61,8 @@ const Accelerator = ({ data }) => {
       <InfoSection>
         {acceleratorQuery.accelerator_info.map((item, idx) => (
           <InfoItem>
-            <InfoIcon alt={item.icon.alt} src={item.icon.url} />
+            <InfoIcon alt={item.icon.alt} src={width > 768 ? item.icon.url : item.mobile_icon.url} />
+
             <InfoText>
               <InfoHeader>{item.info_header}</InfoHeader>
               <InfoDescription>{item.info_description}</InfoDescription>
@@ -63,6 +92,7 @@ const Accelerator = ({ data }) => {
           )}
         </Ticker>
       </TickerSection>
+
       <AcceleratorCTA>
         <div>
           <CTAHeader> {acceleratorQuery.cta_header_text}</CTAHeader>
@@ -87,6 +117,10 @@ export const accelerator = graphql`
           icon {
             alt
             url
+          }
+          mobile_icon {
+            url
+            alt
           }
           info_description
           info_header

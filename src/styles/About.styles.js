@@ -5,7 +5,7 @@ import dimensions from "../styles/dimensions";
 
 export const AboutHero = styled.div`
   margin-left: 14vw;
-  padding-top: 115px;
+  padding-top: 235px;
   font-family: ${fonts.itc_avante_garde};
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-left: 20px;

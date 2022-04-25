@@ -1,10 +1,18 @@
 import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
+import dimensions from "../styles/dimensions";
+
 
 export const ApplyHeader = styled.div`
   margin-left: 14vw;
   margin-top: 316px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-left: 20px;
+    margin-bottom: 123px;
+
+  }
 `;
 
 export const HeaderText = styled.div`
@@ -17,6 +25,11 @@ export const Testimonial = styled.div`
   display: flex;
   margin-top: 115px;
   margin-bottom: 148px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    display: none;
+    ;
+  }
 `;
 
 export const TestimonialText = styled.div`
@@ -45,6 +58,14 @@ export const CharacteristicsHeader = styled.div`
   font-family: ${fonts.itc_avante_garde};
   width: 27vw;
   padding-top: 95px;
+
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 290px;
+    ;
+  }
+
+  
 `;
 
 export const CharacteristicsItem = styled.div`
