@@ -27,6 +27,11 @@ import {
   SmallLogo,
   DownIcon,
   NumberContent,
+  WallOfLoveSection,
+  WallOfLoveHeader,
+  WallofLoveDescription,
+  WallofLoveTestimonials,
+  WallTestimonial,
 } from "../styles/Homepage.styles";
 import DownArrow from "../images/downarrow.png";
 
@@ -37,16 +42,15 @@ const IndexPage = ({ data }) => {
       <HeroContainer>
         <HeroContent>
           <div>
-          <img alt="Envision" src={Envision} />
-          <SmallLogo alt="Envision" src={MobileImage} />
+            <img alt="Envision" src={Envision} />
+            <SmallLogo alt="Envision" src={MobileImage} />
 
-          <HeroDescription>
-            {homepageQuery.hero_description.text}
-          </HeroDescription>
+            <HeroDescription>
+              {homepageQuery.hero_description.text}
+            </HeroDescription>
 
-
-          <DownIcon>
-            <img src={DownArrow} />
+            <DownIcon>
+              <img src={DownArrow} />
             </DownIcon>
           </div>
         </HeroContent>
@@ -96,6 +100,21 @@ const IndexPage = ({ data }) => {
           ))}
         </Numbers>
       </ByTheNumbers>
+      <WallOfLoveSection>
+        <WallOfLoveHeader>{homepageQuery.wall_of_love_header}</WallOfLoveHeader>
+
+        <WallofLoveDescription>
+          {homepageQuery.wall_of_love_description}
+        </WallofLoveDescription>
+
+        <WallofLoveTestimonials>
+          {homepageQuery.testimonials.map((testimonial, idx) => (
+            <WallTestimonial
+              dangerouslySetInnerHTML={{ __html: testimonial.testimonial.html }}
+            />
+          ))}
+        </WallofLoveTestimonials>
+      </WallOfLoveSection>
 
       <HomeCTAs>
         <HomeCTA href="/">BECOME A MENTOR</HomeCTA>
@@ -140,6 +159,15 @@ export const homepage = graphql`
           image {
             url
             alt
+          }
+        }
+
+        wall_of_love_description
+        wall_of_love_header
+        testimonials {
+          testimonial {
+            richText
+            html
           }
         }
       }

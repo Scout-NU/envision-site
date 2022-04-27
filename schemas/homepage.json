@@ -123,6 +123,33 @@
         },
         "label" : "supporter images"
       }
+    },
+    "wall_of_love_header" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Wall of Love Header"
+      }
+    },
+    "wall_of_love_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "wall of love description"
+      }
+    },
+    "testimonials" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "testimonial" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph,strong",
+              "label" : "testimonial"
+            }
+          }
+        },
+        "label" : "testimonials"
+      }
     }
   }
 }

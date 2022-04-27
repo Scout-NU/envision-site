@@ -3,7 +3,6 @@ import colors from "./colors";
 import fonts from "./font_names";
 import dimensions from "../styles/dimensions";
 
-
 export const AcceleratorHeader = styled.div`
   font-family: ${fonts.itc_avante_garde};
   font-size: ${fonts.Heading2Size};
@@ -12,12 +11,11 @@ export const AcceleratorHeader = styled.div`
   width: 32vw;
   margin-left: 6vw;
   margin-top: 423px;
-  
+
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     font-size: ${fonts.acceleratorMobile};
     margin-top: 180px;
     padding-bottom: 38px;
-
   }
 `;
 
@@ -32,7 +30,6 @@ export const InfoSection = styled.div`
     fill: ${colors.white};
   }
 
-
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     background-color: ${colors.black};
     color: ${colors.white};
@@ -40,7 +37,6 @@ export const InfoSection = styled.div`
     svg {
       fill: ${colors.black};
     }
-
   }
 `;
 
@@ -62,8 +58,8 @@ export const InfoIcon = styled.img`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     svg {
       fill: ${colors.white};
-    }  }
-
+    }
+  }
 `;
 
 export const InfoText = styled.div`
@@ -89,7 +85,6 @@ export const InfoDescription = styled.div`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     width: 230px;
     color: ${colors.white};
-
   }
 `;
 
@@ -132,8 +127,6 @@ export const AcceleratorCTA = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: no-wrap;
-
-
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     display: none;

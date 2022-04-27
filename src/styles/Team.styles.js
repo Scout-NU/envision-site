@@ -64,4 +64,3 @@ export const MemberSub = styled.div`
   font-family: ${fonts.space_mono};
   margin-left: 60px;
 `;
-

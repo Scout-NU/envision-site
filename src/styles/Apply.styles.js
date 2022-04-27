@@ -11,7 +11,6 @@ export const ApplyHeader = styled.div`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-left: 20px;
     margin-bottom: 123px;
-
   }
 `;
 

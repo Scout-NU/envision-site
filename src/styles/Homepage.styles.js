@@ -134,15 +134,14 @@ export const CarouselSection = styled.div`
   justify-content: center;
   align-content: center;
 
-
-
   .styles-module_carousel-arrow__26sRw {
     // display: none;
   }
 
   .carousel {
     width: 70vw;
-  }`
+  }
+`;
 export const ByTheNumbers = styled.div`
   background-color: ${colors.white};
 `;
@@ -151,10 +150,11 @@ export const ByTheNumbersHeader = styled.div`
   width: 100vw;
   text-align: center;
   font-size: ${fonts.Heading2Size};
-  color: ${colors.black};
+  color: ${colors.white};
+  background-color: ${colors.black};
   font-family: ${fonts.itc_avante_garde};
-  padding-top: 117px;
-  padding-bottom: 77px;
+  margin-top: 117px;
+  margin-bottom: 77px;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     font-size: ${fonts.subMobile};
@@ -207,7 +207,6 @@ export const Number = styled.div`
       margin: 0px !important;
       transform: rotate(0deg); /* Equal to rotateZ(45deg) */
     }
-
   }
 `;
 
@@ -266,7 +265,6 @@ export const HomeCTAs = styled.div`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     display: inline-grid;
     padding-bottom: 49px;
-
   }
 `;
 
@@ -281,6 +279,66 @@ export const HomeCTA = styled.a`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-bottom: 37px;
     padding: 32px 20px;
+  }
+`;
 
+export const WallOfLoveSection = styled.div``;
+
+export const WallOfLoveHeader = styled.div`
+  font-family: ${fonts.itc_avante_garde}, sans-serif;
+  font-size: ${fonts.Heading2Size};
+  color: ${colors.black};
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    font-size: ${fonts.subMobile};
+
+  }
+`;
+
+export const WallofLoveDescription = styled.div`
+  color: ${colors.black};
+  font-family: ${fonts.space_mono};
+  font-size: ${fonts.BookSub};
+  text-align: center;
+`;
+
+export const WallofLoveTestimonials = styled.div`
+  position: relative;
+
+  div:nth-child(1) {
+    padding-left: 6vw;
+    padding-top: 127px;
+  }
+
+  div:nth-child(2) {
+    padding-left: 6vw;
+    padding-top: 127px;
+
+    @media (min-width: ${dimensions.maxwidthTablet}px) {
+      position: absolute;
+      right: 6vw;
+      text-align: right;
+      padding-top: 127px;
+    }
+  }
+
+  div:nth-child(3) {
+    padding-left: 6vw;
+    padding-top: 127px;
+    @media (min-width: ${dimensions.maxwidthTablet}px) {
+      padding-top: 315px;
+    }
+  }
+`;
+
+export const WallTestimonial = styled.div`
+  width: 64vw;
+  font-size: ${fonts.BodySize};
+  font-family: ${fonts.itc_avante_garde};
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 315px;
   }
 `;

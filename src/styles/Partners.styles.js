@@ -15,8 +15,6 @@ export const PartnersHeaderText = styled.div`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-top: 137px;
     margin-left: 20px;
-
-
   }
 `;
 

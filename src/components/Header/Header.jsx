@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BackgroundColor,
   HeaderContainer,
@@ -7,30 +7,71 @@ import {
   NavCTA,
   NavLinks,
   NavLink,
-  HamburgerMenu
+  HamburgerMenu,
+  HamburgerLinks,
 } from "./Header.styles";
-
-
+import CloseIcon from "../../styles/closeicon.png";
+import HamburgerIcon from "../../styles/hamburger.png";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <BackgroundColor>
-      <HeaderContainer>
+      <HeaderContainer className={open ? "open" : ""}>
         <NavSection>
           <Logo href="/">ENVISION</Logo>
-
+          <HamburgerMenu
+            onClick={() => setOpen(!open)}
+            className={open ? "open" : ""}
+          >
+            <img src={open ? CloseIcon : HamburgerIcon} />
+          </HamburgerMenu>
           <NavLinks>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/portfolio">Portfolio</NavLink>
-            <NavLink href="/partners">Partners</NavLink>
-            <NavLink href="/accelerator">Accelerator</NavLink>
+            <li>
+              {" "}
+              <NavLink href="/about">About</NavLink>
+            </li>
+            <li>
+              <NavLink href="/portfolio">Portfolio</NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink href="/partners">Partners</NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink href="/accelerator">Accelerator</NavLink>
+            </li>
 
             <NavCTA href="/apply">Apply Now</NavCTA>
           </NavLinks>
 
-          {/* <HamburgerMenu>
-
-          </HamburgerMenu> */}
+          <HamburgerLinks className={open ? "open" : ""}>
+            <li>
+              {" "}
+              <NavLink href="/about">About</NavLink>
+            </li>
+            <li>
+              <NavLink href="/portfolio">Portfolio</NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink href="/partners">Partners</NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink href="/accelerator">Accelerator</NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink href="/apply">Apply</NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink href="/team">Team</NavLink>
+            </li>
+          </HamburgerLinks>
         </NavSection>
       </HeaderContainer>
     </BackgroundColor>
