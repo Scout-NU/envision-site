@@ -24,23 +24,29 @@ import Training from "../svg/training.svg";
 import ResourceArrow from "../images/resourcelink.png";
 
 function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
+  const { innerWidth: width, innerHeight: height } =
+    typeof window !== "undefined";
+
   return {
     width,
-    height
+    height,
   };
 }
 
 function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
 
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
     }
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    if (typeof window !== `undefined`) {
+      window.addEventListener("resize", handleResize);
+    }
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return windowDimensions;
@@ -49,8 +55,6 @@ function useWindowDimensions() {
 const Accelerator = ({ data }) => {
   const acceleratorQuery = data.prismicAccelerator.data;
   const { height, width } = useWindowDimensions();
-
-
 
   return (
     <Layout>
@@ -61,7 +65,10 @@ const Accelerator = ({ data }) => {
       <InfoSection>
         {acceleratorQuery.accelerator_info.map((item, idx) => (
           <InfoItem>
-            <InfoIcon alt={item.icon.alt} src={width > 768 ? item.icon.url : item.mobile_icon.url} />
+            <InfoIcon
+              alt={item.icon.alt}
+              src={width > 768 ? item.icon.url : item.mobile_icon.url}
+            />
 
             <InfoText>
               <InfoHeader>{item.info_header}</InfoHeader>
