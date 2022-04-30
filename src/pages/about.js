@@ -28,6 +28,8 @@ import {
   SolutionWrapper,
   AboutCTA,
   AboutCTAContainer,
+  ProblemSection
+
 } from "../styles/About.styles";
 
 const AboutPage = ({ data }) => {
@@ -76,6 +78,8 @@ const AboutPage = ({ data }) => {
           </GuidingPrinciples>
         </AboutPrinciples>
 
+        <ProblemSection>
+
         <TheProblem>
           <TheProblemHeader>{aboutQuery.problem_header}</TheProblemHeader>
           <TheProblemDescription>
@@ -92,9 +96,13 @@ const AboutPage = ({ data }) => {
             </TheSolutionDescription>
           </TheSolution>
         </SolutionWrapper>
+
+
         <AboutCTAContainer>
           <AboutCTA href="/">BECOME A MENTOR</AboutCTA>
         </AboutCTAContainer>
+        </ProblemSection>
+
       </AboutContainer>
     </Layout>
   );

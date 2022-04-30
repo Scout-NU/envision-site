@@ -2,20 +2,24 @@ import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
 import dimensions from "../styles/dimensions";
+import About1 from "../images/gradientsFINAL-about1.png";
+import About2 from "../images/gradientsFINAL-about2.png";
 
 export const AboutHero = styled.div`
-  margin-left: 14vw;
+  padding-left: 14vw;
   padding-top: 235px;
+  background: url(${About1});
+  background-size: cover;
   font-family: ${fonts.itc_avante_garde};
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    margin-left: 20px;
+    padding-left: 20px;
   }
 `;
 
 export const AboutHeroText = styled.div`
   font-size: ${fonts.Heading2Size};
   font-weight: 700;
-  margin-bottom: 62px;
+  padding-bottom: 62px;
 `;
 
 export const AboutHeroParagraph = styled.div`
@@ -46,12 +50,15 @@ export const AboutContainer = styled.div`
 `;
 
 export const AboutPrinciples = styled.div`
-  margin-bottom: 314px;
+  padding-bottom: 114px;
+  background-color: ${colors.black};
+  color: ${colors.white};
 `;
 
 export const PrinciplesHeader = styled.div`
   font-size: ${fonts.Heading2Size};
   text-align: center;
+  padding-top: 114px;
   font-family: ${fonts.itc_avante_garde};
 `;
 
@@ -103,18 +110,24 @@ export const GuidingPrincipleText = styled.div`
   margin-left: 57px;
 `;
 
+export const ProblemSection = styled.div`
+background: url(${About2});
+background-size: cover;
+
+`
+
 export const TheProblem = styled.div`
   margin-left: 14vw;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-\  margin-left: 20px;
-
+    margin-left: 20px;
   }
 `;
 
 export const TheProblemHeader = styled.div`
   font-size: ${fonts.NumberSmall};
   font-family: ${fonts.itc_avante_garde};
+  padding-top: 114px;
 `;
 
 export const TheProblemDescription = styled.div`
@@ -177,5 +190,5 @@ export const AboutCTAContainer = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
-  margin-bottom: 109px;
+  padding-bottom: 109px;
 `;

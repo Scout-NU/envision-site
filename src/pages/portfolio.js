@@ -24,6 +24,7 @@ import {
   MemberName,
   MemberCompany,
   MemberDescription,
+  PortfolioBackground
 } from "../styles/Portfolio.styles";
 
 const Portfolio = ({ data }) => {
@@ -33,6 +34,7 @@ const Portfolio = ({ data }) => {
 
   return (
     <Layout>
+      <PortfolioBackground>
       <PortfolioContainer>
         <PortfolioHeader>{portfolio.portfolio_header}</PortfolioHeader>
 
@@ -86,6 +88,7 @@ const Portfolio = ({ data }) => {
           </CohortList>
         </div>
       </CohortSection>
+      </PortfolioBackground>
     </Layout>
   );
 };

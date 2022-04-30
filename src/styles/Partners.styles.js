@@ -2,6 +2,13 @@ import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
 import dimensions from "../styles/dimensions";
+import Partners from "../images/gradientsFINAL-partners.png"
+
+export const PartnersBackground = styled.div`
+background: url(${Partners});
+background-size: cover;
+
+`
 
 export const PartnersHeader = styled.div``;
 
@@ -9,12 +16,12 @@ export const PartnersHeaderText = styled.div`
   font-family: ${fonts.itc_avante_garde};
   font-size: ${fonts.Heading2Size};
   font-weight: 700;
-  margin-top: 546px;
-  margin-left: 6vw;
+  padding-top: 546px;
+  padding-left: 6vw;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    margin-top: 137px;
-    margin-left: 20px;
+    padding-top: 137px;
+    padding-left: 20px;
   }
 `;
 
@@ -22,12 +29,12 @@ export const PartnersHeaderDescription = styled.div`
   font-family: ${fonts.itc_avante_garde};
   font-size: ${fonts.BookSub};
   font-weight: 300;
-  margin-left: 42vw;
+  padding-left: 42vw;
   width: 42vw;
-  margin-bottom: 64px;
+  padding-bottom: 64px;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    margin-left: 20px;
+    padding-left: 20px;
     width: 300px;
   }
 `;

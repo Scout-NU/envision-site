@@ -18,65 +18,42 @@ import {
   CTAAlign,
   CTALink,
   AcceleratorCTA,
+  AcceleratorBackground,
 } from "../styles/Accelerator.styles";
 import Ticker from "react-ticker";
 import Training from "../svg/training.svg";
 import ResourceArrow from "../images/resourcelink.png";
-
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } =
-    typeof window !== "undefined";
-
-  return {
-    width,
-    height,
-  };
-}
-
-function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    if (typeof window !== `undefined`) {
-      window.addEventListener("resize", handleResize);
-    }
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return windowDimensions;
-}
+import useWindowSize from "../components/useGatsbyWindowSize";
 
 const Accelerator = ({ data }) => {
   const acceleratorQuery = data.prismicAccelerator.data;
-  const { height, width } = useWindowDimensions();
+  const windowSize = useWindowSize();
 
   return (
     <Layout>
-      <AcceleratorHeader>
-        {acceleratorQuery.accelerator_header}
-      </AcceleratorHeader>
+      <AcceleratorBackground>
+        <AcceleratorHeader>
+          {acceleratorQuery.accelerator_header}
+        </AcceleratorHeader>
 
-      <InfoSection>
-        {acceleratorQuery.accelerator_info.map((item, idx) => (
-          <InfoItem>
-            <InfoIcon
-              alt={item.icon.alt}
-              src={width > 768 ? item.icon.url : item.mobile_icon.url}
-            />
+        <InfoSection>
+          {acceleratorQuery.accelerator_info.map((item, idx) => (
+            <InfoItem>
+              <InfoIcon
+                alt={item.icon.alt}
+                src={
+                  windowSize.width > 768 ? item.icon.url : item.mobile_icon.url
+                }
+              />
 
-            <InfoText>
-              <InfoHeader>{item.info_header}</InfoHeader>
-              <InfoDescription>{item.info_description}</InfoDescription>
-            </InfoText>
-          </InfoItem>
-        ))}
-      </InfoSection>
+              <InfoText>
+                <InfoHeader>{item.info_header}</InfoHeader>
+                <InfoDescription>{item.info_description}</InfoDescription>
+              </InfoText>
+            </InfoItem>
+          ))}
+        </InfoSection>
+      </AcceleratorBackground>
 
       <TickerSection>
         <Ticker speed={10} offset={0}>

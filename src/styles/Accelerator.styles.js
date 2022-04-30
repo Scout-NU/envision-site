@@ -2,6 +2,7 @@ import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
 import dimensions from "../styles/dimensions";
+import Accelerator from "../images/gradientsFINAL-accelerator.png";
 
 export const AcceleratorHeader = styled.div`
   font-family: ${fonts.itc_avante_garde};
@@ -9,8 +10,8 @@ export const AcceleratorHeader = styled.div`
   color: ${colors.black};
   font-weight: 700;
   width: 32vw;
-  margin-left: 6vw;
-  margin-top: 423px;
+  padding-left: 6vw;
+  padding-top: 423px;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     font-size: ${fonts.acceleratorMobile};
@@ -18,6 +19,11 @@ export const AcceleratorHeader = styled.div`
     padding-bottom: 38px;
   }
 `;
+
+export const AcceleratorBackground = styled.div`
+background: url(${Accelerator});
+background-size: cover;
+`
 
 export const InfoSection = styled.div`
   padding-left: 6vw;

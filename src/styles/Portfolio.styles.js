@@ -2,13 +2,19 @@ import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
 import dimensions from "../styles/dimensions";
+import Portfolio from "../images/gradientsFINAL-portfolio.png";
+
+export const PortfolioBackground = styled.div`
+  background: url(${Portfolio});
+  background-size: cover;
+`;
 
 export const PortfolioContainer = styled.div``;
 
 export const PortfolioHeader = styled.div`
   font-size: ${fonts.Heading2Size};
   font-family: ${fonts.itc_avante_garde};
-  margin-top: 197px;
+  padding-top: 197px;
   margin-left: 14vw;
   font-weight: 700;
 `;
