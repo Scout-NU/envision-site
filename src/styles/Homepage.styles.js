@@ -2,6 +2,13 @@ import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
 import dimensions from "../styles/dimensions";
+import HomeGradient1 from "../images/gradientsFINAL-home1.png"
+
+export const HeroMission = styled.div`
+background: url(${HomeGradient1});
+background-size: cover;
+
+`
 
 export const HeroContainer = styled.div`
   background-size: cover;
@@ -24,7 +31,7 @@ export const HeroContent = styled.div`
   position: relative;
   z-index: 0;
   padding-top: 308px;
-  margin-left: 6vw;
+  padding-left: 6vw;
 
   img {
     width: 50vw;
@@ -41,7 +48,7 @@ export const HeroDescription = styled.div`
   font-weight: 500;
   width: 34vw;
   color: ${colors.black};
-  margin-top: 39px;
+  padding-top: 39px;
   font-weight: 300;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
@@ -67,7 +74,7 @@ export const DownIcon = styled.div`
 `;
 
 export const MissionSection = styled.div`
-  margin-top: 367px;
+  padding-top: 367px;
   display: flex;
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     background-color: ${colors.white};
@@ -81,9 +88,9 @@ export const MissionTitle = styled.div`
   font-size: ${fonts.Heading2Size};
   color: ${colors.black};
   text-transform: uppercase;
-  margin-left: 22vw;
+  padding-left: 22vw;
   @media (max-width: ${dimensions.maxwidthTablet}px) {
-    margin-left: 0
+    padding-left: 0
     text-align: center;
     font-size: ${fonts.subMobile};
     padding-top: 116px;
@@ -94,9 +101,9 @@ export const MissionTitle = styled.div`
 export const MissionDescription = styled.div`
   font-family: ${fonts.itc_avante_garde}, sans-serif;
   width: 34vw;
-  margin-left: 66px;
+  padding-left: 66px;
   color: ${colors.black};
-  margin-top: 50px;
+  padding-top: 50px;
   font-size: ${fonts.BodySize};
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
@@ -153,8 +160,7 @@ export const ByTheNumbersHeader = styled.div`
   color: ${colors.white};
   background-color: ${colors.black};
   font-family: ${fonts.itc_avante_garde};
-  margin-top: 117px;
-  margin-bottom: 77px;
+
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     font-size: ${fonts.subMobile};

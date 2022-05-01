@@ -32,6 +32,7 @@ import {
   WallofLoveDescription,
   WallofLoveTestimonials,
   WallTestimonial,
+  HeroMission
 } from "../styles/Homepage.styles";
 import DownArrow from "../images/downarrow.png";
 
@@ -39,6 +40,7 @@ const IndexPage = ({ data }) => {
   const homepageQuery = data.prismicHomepage.data;
   return (
     <Layout>
+      <HeroMission>
       <HeroContainer>
         <HeroContent>
           <div>
@@ -67,6 +69,7 @@ const IndexPage = ({ data }) => {
           </MissionDescription>
         </MissionSection>
       </HeroContainer>
+      </HeroMission>
       {/* <CarouselSection>
         <Carousel className="carousel" show={1.2} slide={1} swiping={true}>
           {homepageQuery.venture.map((object, i) => (

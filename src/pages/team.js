@@ -10,6 +10,7 @@ import {
   TeamImage,
   TeamMember,
   TeamMembers,
+  TeamContainer
 } from "../styles/Team.styles";
 
 export default function Team({ data }) {
@@ -17,6 +18,7 @@ export default function Team({ data }) {
 
   return (
     <Layout>
+      <TeamContainer>
       <TeamHeader>{teamQuery.team_header}</TeamHeader>
 
       <TeamMembers>
@@ -32,6 +34,8 @@ export default function Team({ data }) {
           </TeamMember>
         ))}
       </TeamMembers>
+
+      </TeamContainer>
     </Layout>
   );
 }
