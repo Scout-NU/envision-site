@@ -17,6 +17,7 @@ const fonts = {
     subMobile: "2.5em",
     QuestionText: "1.313em",
     numbersMobile: "4em",
+    ventureTitle: "3.75em",
     footerMobile: "0.688em",
     acceleratorMobile: "2.688em"
   };

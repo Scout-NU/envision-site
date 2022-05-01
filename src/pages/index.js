@@ -6,6 +6,9 @@ import Envision from "../images/ENVISION.png";
 import MobileImage from "../images/mobileimage.png";
 import VentureCard from "../components/VentureCard/VentureCard";
 import { Carousel } from "@trendyol-js/react-carousel";
+import BackArrow from "../images/BackArrow.png";
+import ForwardArrow from "../images/forwardarrow.png";
+
 import {
   HeroContainer,
   HeroContent,
@@ -32,9 +35,18 @@ import {
   WallofLoveDescription,
   WallofLoveTestimonials,
   WallTestimonial,
-  HeroMission
+  HeroMission,
+  ArrowImage
 } from "../styles/Homepage.styles";
 import DownArrow from "../images/downarrow.png";
+
+const Arrow1=()=> {
+  return <ArrowImage src={BackArrow} />
+}
+
+const Arrow2=()=> {
+  return <ArrowImage src={ForwardArrow} />
+}
 
 const IndexPage = ({ data }) => {
   const homepageQuery = data.prismicHomepage.data;
@@ -70,14 +82,6 @@ const IndexPage = ({ data }) => {
         </MissionSection>
       </HeroContainer>
       </HeroMission>
-      {/* <CarouselSection>
-        <Carousel className="carousel" show={1.2} slide={1} swiping={true}>
-          {homepageQuery.venture.map((object, i) => (
-            <VentureCard venture={object} key={i} />
-          ))}
-        </Carousel>
-      </CarouselSection> */}
-
       <ByTheNumbers>
         <ByTheNumbersHeader>{homepageQuery.numbers_header}</ByTheNumbersHeader>
 
@@ -103,6 +107,14 @@ const IndexPage = ({ data }) => {
           ))}
         </Numbers>
       </ByTheNumbers>
+      <CarouselSection>
+        <Carousel className="carousel" leftArrow={<Arrow1 />} rightArrow={<Arrow2 />} show={1} slide={1} swiping={true}>
+          {homepageQuery.venture.map((object, i) => (
+            <VentureCard venture={object} key={i} />
+          ))}
+        </Carousel>
+      </CarouselSection>
+
       <WallOfLoveSection>
         <WallOfLoveHeader>{homepageQuery.wall_of_love_header}</WallOfLoveHeader>
 
@@ -117,12 +129,13 @@ const IndexPage = ({ data }) => {
             />
           ))}
         </WallofLoveTestimonials>
-      </WallOfLoveSection>
-
-      <HomeCTAs>
+        <HomeCTAs>
         <HomeCTA href="/">BECOME A MENTOR</HomeCTA>
         <HomeCTA href="/">PARTNER WITH US</HomeCTA>
       </HomeCTAs>
+      </WallOfLoveSection>
+
+
     </Layout>
   );
 };
@@ -132,11 +145,13 @@ export const homepage = graphql`
     prismicHomepage {
       data {
         venture {
-          money_raised
           venture_description {
             text
           }
           venture_image {
+            url
+          }
+          venture_logo {
             url
           }
           venture_title

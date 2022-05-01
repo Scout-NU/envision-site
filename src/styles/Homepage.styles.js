@@ -2,13 +2,14 @@ import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
 import dimensions from "../styles/dimensions";
-import HomeGradient1 from "../images/gradientsFINAL-home1.png"
+import HomeGradient1 from "../images/gradientsFINAL-home1.png";
+import HomeGradient2 from "../images/gradientsFINAL-home2.png";
+import HomeGradient3 from "../images/gradientsFINAL-home3.png";
 
 export const HeroMission = styled.div`
-background: url(${HomeGradient1});
-background-size: cover;
-
-`
+  background: url(${HomeGradient1});
+  background-size: cover;
+`;
 
 export const HeroContainer = styled.div`
   background-size: cover;
@@ -130,6 +131,13 @@ export const CTASection = styled.div`
   margin-bottom: 185px;
 `;
 
+export const ArrowImage = styled.img`
+  width: 58px;
+  height: 58px;
+  margin-top: 258px;
+  padding: 70px;
+`;
+
 export const CarouselSection = styled.div`
   width: 100vw;
   padding-top: 68px;
@@ -140,10 +148,6 @@ export const CarouselSection = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-
-  .styles-module_carousel-arrow__26sRw {
-    // display: none;
-  }
 
   .carousel {
     width: 70vw;
@@ -161,18 +165,20 @@ export const ByTheNumbersHeader = styled.div`
   background-color: ${colors.black};
   font-family: ${fonts.itc_avante_garde};
 
-
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     font-size: ${fonts.subMobile};
   }
 `;
 
 export const Numbers = styled.div`
+  background: url(${HomeGradient2});
+  background-size: cover;
   display: flex;
   justify-content: space-between;
   color: ${colors.black};
   font-family: ${fonts.itc_avante_garde};
   text-align: center;
+  padding-top: 194px;
   padding-bottom: 77px;
   padding-left: 6vw;
   padding-right: 6vw;
@@ -187,6 +193,8 @@ export const Numbers = styled.div`
 
 export const Number = styled.div`
   width: 25vw;
+  padding-top; 194px;
+
   height: 27vw;
   background-size: 27vw;
   position: relative;
@@ -288,7 +296,10 @@ export const HomeCTA = styled.a`
   }
 `;
 
-export const WallOfLoveSection = styled.div``;
+export const WallOfLoveSection = styled.div`
+background: url(${HomeGradient3});
+background-size: cover;
+`;
 
 export const WallOfLoveHeader = styled.div`
   font-family: ${fonts.itc_avante_garde}, sans-serif;
@@ -296,10 +307,10 @@ export const WallOfLoveHeader = styled.div`
   color: ${colors.black};
   text-transform: uppercase;
   text-align: center;
+  padding-top: 196px;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     font-size: ${fonts.subMobile};
-
   }
 `;
 

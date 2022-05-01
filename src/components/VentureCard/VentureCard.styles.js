@@ -3,7 +3,6 @@ import colors from "../../styles/colors";
 import fonts from "../../styles/font_names";
 
 export const VentureContainer = styled.div`
-  width: 66vw;
   margin-top: 68px;
   margin-bottom: 68px;
   background-color: ${colors.black};
@@ -19,7 +18,7 @@ export const VentureImage = styled.div`
 
 export const VentureHeader = styled.div`
   color: ${colors.white};
-  font-size: ${fonts.LargeBook};
+  font-size: ${fonts.ventureTitle};
   font-family: ${fonts.itc_avante_garde}, sans-serif;
 `;
 
@@ -32,7 +31,7 @@ export const VentureDescription = styled.div`
   font-size: ${fonts.BodySize};
   font-family: ${fonts.itc_avante_garde}, sans-serif;
   margin-top: 44px;
-  width: 22vw;
+  // width: 35vw;
 `;
 
 export const VentureItems = styled.div`
@@ -49,6 +48,6 @@ export const Item = styled.div`
 
 export const VentureName = styled.div`
   color: ${colors.white};
-  font-size: ${fonts.Heading2Size};
+  font-size: ${fonts.SpaceHeading2};
   font-family: itc-avant-garde-gothic-pro, sans-serif;
 `;

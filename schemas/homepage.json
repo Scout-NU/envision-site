@@ -50,6 +50,14 @@
               "label" : "Venture Image"
             }
           },
+          "venture_logo" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "venture logo"
+            }
+          },
           "venture_title" : {
             "type" : "Text",
             "config" : {
@@ -67,12 +75,6 @@
             "config" : {
               "multi" : "paragraph",
               "label" : "Venture Description"
-            }
-          },
-          "money_raised" : {
-            "type" : "Text",
-            "config" : {
-              "label" : "Money Raised"
             }
           }
         },

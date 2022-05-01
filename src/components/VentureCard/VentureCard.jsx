@@ -23,12 +23,6 @@ export default function VentureCard(venture) {
         <VentureDescription>
           {venture.venture.venture_description.text}
         </VentureDescription>
-        <VentureItems>
-          <Item />
-          <Item />
-          <Item />
-          <Item />
-        </VentureItems>
       </VentureText>
     </VentureContainer>
   );
