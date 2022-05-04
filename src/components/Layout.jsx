@@ -5,10 +5,10 @@ import Footer from "../components/Footer/Footer.jsx";
 import "../styles/fonts.scss";
 const LayoutContainer = styled.div``;
 
-export default function Layout({ children }) {
+export default function Layout({ children, headerMode }) {
   return (
     <LayoutContainer>
-      <Header />
+      <Header headerMode={headerMode} />
 
       {children}
 

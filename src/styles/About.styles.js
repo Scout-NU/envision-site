@@ -1,16 +1,19 @@
 import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
+import AboutHeroGradient from "../images/about-hero-gradient.png";
+import ProblemSolutionGradient from "../images/about-problem-solution-gradient.png";
 
 export const AboutHero = styled.div`
-  margin-left: 14vw;
-  padding-top: 115px;
+  padding-left: 14vw;
+  padding-top: 15em;
   font-family: ${fonts.itc_avante_garde};
+  background: url(${AboutHeroGradient}) center no-repeat;
+  background-size: cover;
 `;
 
 export const AboutHeroText = styled.div`
   font-size: ${fonts.Heading2Size};
-  font-weight: 700;
   margin-bottom: 62px;
 `;
 
@@ -28,11 +31,19 @@ export const ParagraphColumn = styled.div`
 `;
 
 export const AboutContainer = styled.div`
-  background-color: ${colors.white};
+  background-color: ${colors.black};
+  color: ${colors.white};
+`;
+
+export const ProblemSolution = styled.div`
+  background: url(${ProblemSolutionGradient}) center no-repeat;
+  background-size: cover;
+  color: ${colors.black};
+  padding: 5em 0;
 `;
 
 export const AboutPrinciples = styled.div`
-  margin-bottom: 314px;
+  padding: 10em 0;
 `;
 
 export const PrinciplesHeader = styled.div`
@@ -62,8 +73,9 @@ export const GuidingPrinciple = styled.div`
 `;
 
 export const HeroHeadline = styled.span`
-  color: ${colors.black};
+  font-weight: ${(props) => props.black ? '700' : '400'};
 `;
+
 export const GuidingPrincipleHeader = styled.div`
   font-family: ${fonts.space_mono};
   font-size: ${fonts.BookSub};
@@ -141,5 +153,4 @@ export const AboutCTAContainer = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
-  margin-bottom: 109px;
 `;

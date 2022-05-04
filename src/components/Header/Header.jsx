@@ -1,25 +1,19 @@
 import React from "react";
-import { BackgroundColor, HeaderContainer, Logo,NavSection, NavCTA, NavLinks, NavLink } from "./Header.styles";
+import { HeaderContainer, Logo, NavCTA, NavLinks, NavLink } from "./Header.styles";
 
 
 
-export default function Header() {
+export default function Header({ headerMode }) {
   return (
-    <BackgroundColor>
-      <HeaderContainer>
-        <NavSection>
-          <Logo>ENVISION</Logo>
-
-          <NavLinks>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/portfolio">Portfolio</NavLink>
-            <NavLink href="/partners">Partners</NavLink>
-            <NavLink href="/accelerator">Accelerator</NavLink>
-
-            <NavCTA>Apply Now</NavCTA>
-          </NavLinks>
-        </NavSection>
-      </HeaderContainer>
-    </BackgroundColor>
+    <HeaderContainer headerMode={headerMode}>
+      <Logo headerMode={headerMode}>ENVISION</Logo>
+      <NavLinks headerMode={headerMode}>
+        <NavLink href="/about">About</NavLink>
+        <NavLink href="/portfolio">Portfolio</NavLink>
+        <NavLink href="/partners">Partners</NavLink>
+        <NavLink href="/accelerator">Accelerator</NavLink>
+        <NavCTA>Apply Now</NavCTA>
+      </NavLinks>
+    </HeaderContainer>
   );
 }

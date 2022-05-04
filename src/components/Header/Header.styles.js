@@ -2,10 +2,6 @@ import styled from "styled-components";
 import colors from "../../styles/colors";
 import fonts from "../../styles/font_names";
 
-export const BackgroundColor = styled.div`
-  background-color: ${colors.black};
-`;
-
 export const HeaderContainer = styled.div`
   font-family: ${fonts.space_mono}, monospace;
   font-size: ${fonts.buttonSize};
@@ -17,21 +13,16 @@ export const HeaderContainer = styled.div`
   width: 100%;
   padding-left: 6vw;
   color: ${colors.white};
-  background-color: ${colors.black};
+  background-color: ${(props) => props.headerMode === 'transparent' ? 'transparent' : `${colors.black}`};
 `;
 
 export const Logo = styled.div`
   position: absolute;
-  background-color: ${colors.black};
-`;
-
-export const NavSection = styled.div`
-  background-color: ${colors.black};
-  width: 100vw;
+  color: ${(props) => props.headerMode === 'transparent' ? `${colors.black}` : `${colors.white}`};
 `;
 
 export const NavCTA = styled.div`
-  padding: 13px 15px 13px 15px;
+  padding: 13px 15px;
   border: solid 1px;
   border-radius: 10px;
 `;
@@ -41,13 +32,13 @@ export const NavLinks = styled.ul`
   position: absolute;
   right: 12vw;
   margin-top: -13px;
-  padding: 0px;
-  background-color: ${colors.black};
+  padding: 0;
   align-items: center;
+  color: ${(props) => props.headerMode === 'transparent' ? `${colors.black}` : `${colors.white}`};
 `;
 
 export const NavLink = styled.a`
   margin-right: 48px;
   text-decoration: none;
-  color: ${colors.white};
+  color: inherit;
 `;

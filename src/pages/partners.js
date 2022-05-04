@@ -18,7 +18,6 @@ import {
   TickerImages,
 } from "../styles/Partners.styles";
 import Ticker from "react-ticker";
-import { Carousel } from "@trendyol-js/react-carousel";
 
 const PartnersPage = ({ data }) => {
   const partnersQuery = data.prismicPartnersPage.data;

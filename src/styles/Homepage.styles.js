@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
-import Ellipse from "../images/ellipse.png";
+import HeroGradient from "../images/homepage-hero-gradient.png";
+import NumbersGradient from "../images/homepage-numbers-gradient.png";
 
 export const HeroContainer = styled.div`
+  background: url(${HeroGradient}) center no-repeat;
   background-size: cover;
-  background-color: black;
+  color: ${colors.black};
 `;
 
 export const HeroContent = styled.div`
@@ -23,7 +25,6 @@ export const HeroDescription = styled.div`
   font-size: ${fonts.LargeBook};
   font-weight: 500;
   width: 34vw;
-  color: ${colors.white};
   margin-top: 39px;
   font-weight: 300;
 `;
@@ -36,7 +37,6 @@ export const MissionSection = styled.div`
 export const MissionTitle = styled.div`
   font-family: ${fonts.itc_avante_garde}, sans-serif;
   font-size: ${fonts.Heading2Size};
-  color: ${colors.white};
   text-transform: uppercase;
   margin-left: 22vw;
 `;
@@ -45,17 +45,16 @@ export const MissionDescription = styled.div`
   font-family: ${fonts.itc_avante_garde}, sans-serif;
   width: 34vw;
   margin-left: 66px;
-  color: ${colors.white};
   margin-top: 50px;
   font-size: ${fonts.BodySize};
 `;
 
 export const MissionCTA = styled.a`
-  background-color: ${colors.white};
+  background-color: ${colors.black};
   border-radius: 12.19px;
   font-family: ${fonts.space_mono};
   padding: 30px 70px;
-  color: ${colors.black};
+  color: ${colors.white};
   text-decoration: none;
   font-size: ${fonts.BodySize};
 `;
@@ -66,7 +65,8 @@ export const CTASection = styled.div`
 `;
 
 export const ByTheNumbers = styled.div`
-  background-color: ${colors.white};
+  background: url(${NumbersGradient}) center no-repeat;
+  background-size: cover;
 `;
 
 export const ByTheNumbersHeader = styled.div`
@@ -83,7 +83,6 @@ export const ByTheNumbersHeader = styled.div`
 export const Numbers = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: ${colors.black};
   color: ${colors.black};
   font-family: ${fonts.itc_avante_garde};
   text-align: center;
@@ -98,8 +97,6 @@ export const Number = styled.div`
   align-items: center;
   width: 25vw;
   height: 27vw;
-  background: url(${Ellipse}) center no-repeat;
-  background-size: 27vw;
 
   span {
     font-size: 48px;
