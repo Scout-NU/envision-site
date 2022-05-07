@@ -17,7 +17,6 @@ export const FooterContent = styled.div`
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     flex-direction: column-reverse;
     padding-top: 20px;
-
   }
 `;
 
@@ -58,19 +57,19 @@ export const FooterLinks = styled.div`
 `;
 
 export const FooterImage = styled.img`
+  display: none;
 
-display: none;
-
-@media (max-width: ${dimensions.maxwidthTablet}px) {
-  display: initial;
-  width: 127px !important;
-  margin-bottom: 18px;
-}
-
-`
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    display: initial;
+    width: 127px !important;
+    margin-bottom: 18px;
+  }
+`;
 
 export const FooterLink = styled.div`
-  color: ${colors.white};
+  a {
+    color: ${colors.white};
+  }
   text-decoration: underline;
   margin-bottom: 23px;
   @media (max-width: ${dimensions.maxwidthTablet}px) {
@@ -116,7 +115,6 @@ export const FooterCopyright = styled.div`
 export const FooterLinksSection = styled.div`
   display: flex;
   justify-content: flex-start;
-
 
   @media (min-width: ${dimensions.maxwidthTablet}px) {
     img {

@@ -62,11 +62,24 @@ export default function Footer() {
           <div>
             <FooterImage src={MobileImage} />
             <FooterLinks>
-              <FooterLink>WALL OF LOVE</FooterLink>
-              <FooterLink>ABOUT</FooterLink>
-              <FooterLink>PORTFOLIO</FooterLink>
-              <FooterLink>PARTNERS</FooterLink>
-              <FooterLink>ACCELERATOR</FooterLink>
+              <FooterLink>
+                <a href="#">WALL OF LOVE</a>
+              </FooterLink>
+              <FooterLink>
+                <a href="/about">ABOUT</a>
+              </FooterLink>
+              <FooterLink>
+                <a href="/portfolio">PORTFOLIO</a>
+              </FooterLink>
+              <FooterLink>
+                <a href="/partners">PARTNERS</a>
+              </FooterLink>
+              <FooterLink>
+                <a href="/accelerator">ACCELERATOR</a>
+              </FooterLink>
+              <FooterLink>
+                <a href="/team">THE TEAM</a>
+              </FooterLink>
             </FooterLinks>
           </div>
         </FooterLinksSection>
