@@ -31,7 +31,7 @@ export const SmallLogo = styled.img`
 export const HeroContent = styled.div`
   position: relative;
   z-index: 0;
-  padding-top: 308px;
+  padding-top: 366px;
   padding-left: 6vw;
 
   img {
