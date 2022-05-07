@@ -136,6 +136,9 @@ export const ArrowImage = styled.img`
   height: 58px;
   margin-top: 258px;
   padding: 70px;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding: 0px;
+  }
 `;
 
 export const CarouselSection = styled.div`
@@ -150,7 +153,7 @@ export const CarouselSection = styled.div`
   align-content: center;
 
   .carousel {
-    width: 70vw;
+    width: 100vw;
   }
 `;
 export const ByTheNumbers = styled.div`

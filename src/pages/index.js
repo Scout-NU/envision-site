@@ -8,6 +8,7 @@ import VentureCard from "../components/VentureCard/VentureCard";
 import { Carousel } from "@trendyol-js/react-carousel";
 import BackArrow from "../images/BackArrow.png";
 import ForwardArrow from "../images/forwardarrow.png";
+import Ticker from "react-ticker";
 
 import {
   HeroContainer,
@@ -36,54 +37,58 @@ import {
   WallofLoveTestimonials,
   WallTestimonial,
   HeroMission,
-  ArrowImage
+  ArrowImage,
 } from "../styles/Homepage.styles";
 import DownArrow from "../images/downarrow.png";
 
-const Arrow1=()=> {
-  return <ArrowImage src={BackArrow} />
-}
+const Arrow1 = () => {
+  return <ArrowImage src={BackArrow} />;
+};
 
-const Arrow2=()=> {
-  return <ArrowImage src={ForwardArrow} />
-}
+const Arrow2 = () => {
+  return <ArrowImage src={ForwardArrow} />;
+};
 
 const IndexPage = ({ data }) => {
   const homepageQuery = data.prismicHomepage.data;
   return (
     <Layout>
       <HeroMission>
-      <HeroContainer>
-        <HeroContent>
-          <div>
-            <img alt="Envision" src={Envision} />
-            <SmallLogo alt="Envision" src={MobileImage} />
+        <HeroContainer>
+          <HeroContent>
+            <div>
+              <img alt="Envision" src={Envision} />
+              <SmallLogo alt="Envision" src={MobileImage} />
 
-            <HeroDescription>
-              {homepageQuery.hero_description.text}
-            </HeroDescription>
+              <HeroDescription>
+                {homepageQuery.hero_description.text}
+              </HeroDescription>
 
-            <DownIcon>
-              <img src={DownArrow} />
-            </DownIcon>
-          </div>
-        </HeroContent>
+              <DownIcon>
+                <img src={DownArrow} />
+              </DownIcon>
+            </div>
+          </HeroContent>
 
-        <MissionSection>
-          <MissionTitle>{homepageQuery.mission_title}</MissionTitle>
-          <MissionDescription>
-            {homepageQuery.mission_description.text} <br />
-            <CTASection>
-              <MissionCTA href={`/${homepageQuery.mission_cta_destination}`}>
-                {homepageQuery.mission_cta_text}
-              </MissionCTA>
-            </CTASection>
-          </MissionDescription>
-        </MissionSection>
-      </HeroContainer>
+          <MissionSection>
+            <MissionTitle>{homepageQuery.mission_title}</MissionTitle>
+            <MissionDescription>
+              {homepageQuery.mission_description.text} <br />
+              <CTASection>
+                <MissionCTA href={`/${homepageQuery.mission_cta_destination}`}>
+                  {homepageQuery.mission_cta_text}
+                </MissionCTA>
+              </CTASection>
+            </MissionDescription>
+          </MissionSection>
+        </HeroContainer>
       </HeroMission>
       <ByTheNumbers>
-        <ByTheNumbersHeader>{homepageQuery.numbers_header}</ByTheNumbersHeader>
+        <ByTheNumbersHeader>
+          <Ticker speed={10} offset={0}>
+            {({ index }) => <div>{homepageQuery.numbers_header}</div>}
+          </Ticker>
+        </ByTheNumbersHeader>
 
         <Numbers>
           {homepageQuery.numbers.map((object, i) => (
@@ -108,7 +113,14 @@ const IndexPage = ({ data }) => {
         </Numbers>
       </ByTheNumbers>
       <CarouselSection>
-        <Carousel className="carousel" leftArrow={<Arrow1 />} rightArrow={<Arrow2 />} show={1} slide={1} swiping={true}>
+        <Carousel
+          className="carousel"
+          leftArrow={<Arrow1 />}
+          rightArrow={<Arrow2 />}
+          show={1}
+          slide={1}
+          swiping={true}
+        >
           {homepageQuery.venture.map((object, i) => (
             <VentureCard venture={object} key={i} />
           ))}
@@ -130,12 +142,10 @@ const IndexPage = ({ data }) => {
           ))}
         </WallofLoveTestimonials>
         <HomeCTAs>
-        <HomeCTA href="/">BECOME A MENTOR</HomeCTA>
-        <HomeCTA href="/">PARTNER WITH US</HomeCTA>
-      </HomeCTAs>
+          <HomeCTA href="/">BECOME A MENTOR</HomeCTA>
+          <HomeCTA href="/">PARTNER WITH US</HomeCTA>
+        </HomeCTAs>
       </WallOfLoveSection>
-
-
     </Layout>
   );
 };
