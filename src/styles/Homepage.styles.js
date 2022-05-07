@@ -195,6 +195,8 @@ export const Numbers = styled.div`
     display: inherit;
     text-align: left;
     padding-left: 0px;
+    padding-top: 50px;
+
   }
 `;
 

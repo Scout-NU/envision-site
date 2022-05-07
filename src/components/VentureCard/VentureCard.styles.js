@@ -28,6 +28,9 @@ export const VentureHeader = styled.div`
   color: ${colors.white};
   font-size: ${fonts.ventureTitle};
   font-family: ${fonts.itc_avante_garde}, sans-serif;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    font-size: ${fonts.ventureTitleMobile};
+  }
 `;
 
 export const VentureText = styled.div`
@@ -36,7 +39,7 @@ export const VentureText = styled.div`
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     margin-left: 0px;
-    width; 100vw;
+    width; 80vw;
   }
 `;
 
@@ -45,6 +48,11 @@ export const VentureDescription = styled.div`
   font-size: ${fonts.BodySize};
   font-family: ${fonts.itc_avante_garde}, sans-serif;
   margin-top: 44px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 295px;
+  }
+
 `;
 
 export const VentureItems = styled.div`
@@ -63,4 +71,9 @@ export const VentureName = styled.div`
   color: ${colors.white};
   font-size: ${fonts.SpaceHeading2};
   font-family: itc-avant-garde-gothic-pro, sans-serif;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    font-size: ${fonts.BookSub};
+    width: 295px;
+  }
 `;
