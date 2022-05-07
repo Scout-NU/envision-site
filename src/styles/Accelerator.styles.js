@@ -15,7 +15,7 @@ export const AcceleratorHeader = styled.div`
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     font-size: ${fonts.acceleratorMobile};
-    margin-top: 180px;
+    padding-top: 180px;
     padding-bottom: 38px;
   }
 `;
