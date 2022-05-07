@@ -86,7 +86,11 @@ const IndexPage = ({ data }) => {
       <ByTheNumbers>
         <ByTheNumbersHeader>
           <Ticker speed={10} offset={0}>
-            {({ index }) => <div>{homepageQuery.numbers_header}</div>}
+            {({ index }) => (
+              <>
+                <div style={{ paddingRight: "0.5em" }}>{`  ${homepageQuery.numbers_header}  `}</div>
+              </>
+            )}
           </Ticker>
         </ByTheNumbersHeader>
 
