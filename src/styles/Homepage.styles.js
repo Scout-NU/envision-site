@@ -81,6 +81,10 @@ export const MissionSection = styled.div`
     background-color: ${colors.white};
     display: block;
     width: 100%;
+    padding-top: 100px;
+    background: url(${HomeGradient2});
+    background-size: cover;
+
   }
 `;
 
@@ -128,7 +132,7 @@ export const MissionCTA = styled.a`
 
 export const CTASection = styled.div`
   margin-top: 68px;
-  margin-bottom: 185px;
+  padding-bottom: 185px;
 `;
 
 export const ArrowImage = styled.img`
