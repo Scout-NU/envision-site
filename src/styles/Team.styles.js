@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
-import TeamGradient from "../images/gradientsFINAL-team.png";
 
 export const TeamHeader = styled.div`
   font-size: ${fonts.Heading2Size};
@@ -67,6 +66,6 @@ export const MemberSub = styled.div`
 `;
 
 export const TeamContainer = styled.div`
-background: url(${TeamGradient});
+background: url("https://i.imgur.com/GSnZGHI.jpg");
 background-size: cover;
 `
