@@ -24,6 +24,7 @@ export const TeamMember = styled.div`
   height: 401px;
   padding-bottom: 30px;
   padding-right: 19px;
+  
 `;
 
 export const TeamImage = styled.img`
