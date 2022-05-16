@@ -2,21 +2,18 @@ import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
 import dimensions from "../styles/dimensions";
-import HomeGradient1 from "../images/gradientsFINAL-home1.png";
 import HomeGradient2 from "../images/gradientsFINAL-home2.png";
 import HomeGradient3 from "../images/gradientsFINAL-home3.png";
 import NumbersGradient from "../images/homepage-numbers-gradient.png";
-import HeroGradient from "../images/homepage-hero-gradient.png";
 
 
 export const HeroMission = styled.div`
-  background: url(${HomeGradient1});
   background-size: cover;
 `;
 
 export const HeroContainer = styled.div`
-  background: url(${HeroGradient}) center no-repeat;
-  background-size: cover;
+background: url("https://i.imgur.com/lcybSZv.png");
+background-size: cover;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     background-color: ${colors.black};
