@@ -50,6 +50,14 @@
               "label" : "Venture Image"
             }
           },
+          "venture_logo" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "venture logo"
+            }
+          },
           "venture_title" : {
             "type" : "Text",
             "config" : {
@@ -67,12 +75,6 @@
             "config" : {
               "multi" : "paragraph",
               "label" : "Venture Description"
-            }
-          },
-          "money_raised" : {
-            "type" : "Text",
-            "config" : {
-              "label" : "Money Raised"
             }
           }
         },
@@ -122,6 +124,33 @@
           }
         },
         "label" : "supporter images"
+      }
+    },
+    "wall_of_love_header" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Wall of Love Header"
+      }
+    },
+    "wall_of_love_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "wall of love description"
+      }
+    },
+    "testimonials" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "testimonial" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph,strong",
+              "label" : "testimonial"
+            }
+          }
+        },
+        "label" : "testimonials"
       }
     }
   }

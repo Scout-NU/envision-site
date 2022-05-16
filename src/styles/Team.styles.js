@@ -6,24 +6,25 @@ export const TeamHeader = styled.div`
   font-size: ${fonts.Heading2Size};
   font-family: ${fonts.itc_avante_garde};
   font-weight: 700;
-  margin-left: 14vw;
-  margin-top: 331px;
-  margin-bottom: 127px;
+  padding-left: 14vw;
+  padding-top: 331px;
+  padding-bottom: 127px;
 `;
 
 export const TeamMembers = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 `;
 
 export const TeamMember = styled.div`
   position: relative;
   width: 434px;
   height: 401px;
-  margin-bottom: 30px;
-  margin-right: 19px;
+  padding-bottom: 30px;
+  padding-right: 19px;
+  
 `;
 
 export const TeamImage = styled.img`
@@ -54,14 +55,18 @@ export const MemberName = styled.div`
   font-size: ${fonts.SpaceHeading2};
   color: ${colors.white};
   font-family: ${fonts.space_mono};
-  margin-top: 137px;
-  margin-left: 60px;
+  padding-top: 137px;
+  padding-left: 60px;
 `;
 
 export const MemberSub = styled.div`
   font-size: ${fonts.footerSizeDesktop};
   color: ${colors.white};
   font-family: ${fonts.space_mono};
-  margin-left: 60px;
+  padding-left: 60px;
 `;
 
+export const TeamContainer = styled.div`
+background: url("https://i.imgur.com/GSnZGHI.jpg");
+background-size: cover;
+`

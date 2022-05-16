@@ -17,6 +17,7 @@ import {
   TestimonialImage,
   TestimonialText,
   FAQHeader,
+  FaqSection
 } from "../styles/Apply.styles";
 
 const Apply = ({ data }) => {
@@ -54,6 +55,7 @@ const Apply = ({ data }) => {
           <a href={`/${applyQuery.cta_destination}`}>{applyQuery.apply_cta}</a>
         </ApplyCTA>
       </Characteristics>
+      <FaqSection>
       <FAQHeader>FREQUENTLY ASKED QUESTIONS</FAQHeader>
 
       <FAQs>
@@ -61,6 +63,7 @@ const Apply = ({ data }) => {
           <Question key={idx} question={question} />
         ))}
       </FAQs>
+      </FaqSection>
     </Layout>
   );
 };

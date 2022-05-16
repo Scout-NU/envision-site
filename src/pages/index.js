@@ -3,6 +3,13 @@ import { graphql } from "gatsby";
 import "../styles/fonts.scss";
 import Layout from "../components/Layout";
 import Envision from "../images/ENVISION.png";
+import MobileImage from "../images/mobileimage.png";
+import VentureCard from "../components/VentureCard/VentureCard";
+import { Carousel } from "@trendyol-js/react-carousel";
+import BackArrow from "../images/BackArrow.png";
+import ForwardArrow from "../images/forwardarrow.png";
+import Ticker from "react-ticker";
+
 import {
   HeroContainer,
   HeroContent,
@@ -12,51 +19,85 @@ import {
   MissionTitle,
   MissionCTA,
   CTASection,
+  CarouselSection,
   ByTheNumbers,
   ByTheNumbersHeader,
   Numbers,
   Number,
   NumberText,
   NumberDescription,
-  SupporterImagesSection,
-  SupporterImages,
-  SupporterImage,
   HomeCTAs,
   HomeCTA,
+  SmallLogo,
+  DownIcon,
+  NumberContent,
+  WallOfLoveSection,
+  WallOfLoveHeader,
+  WallofLoveDescription,
+  WallofLoveTestimonials,
+  WallTestimonial,
+  HeroMission,
+  ArrowImage,
 } from "../styles/Homepage.styles";
+import DownArrow from "../images/downarrow.png";
+
+const Arrow1 = () => {
+  return <ArrowImage src={BackArrow} />;
+};
+
+const Arrow2 = () => {
+  return <ArrowImage src={ForwardArrow} />;
+};
 
 const IndexPage = ({ data }) => {
   const homepageQuery = data.prismicHomepage.data;
   return (
-    <Layout headerMode='transparent'>
-      <HeroContainer>
-        <HeroContent>
-          <img alt="Envision" src={Envision} />
-          <HeroDescription>
-            {homepageQuery.hero_description.text}
-          </HeroDescription>
-        </HeroContent>
+    <Layout>
+      <HeroMission>
+        <HeroContainer>
+          <HeroContent>
+            <div>
+              <img alt="Envision" src={Envision} />
+              <SmallLogo alt="Envision" src={MobileImage} />
 
-        <MissionSection>
-          <MissionTitle>{homepageQuery.mission_title}</MissionTitle>
-          <MissionDescription>
-            {homepageQuery.mission_description.text} <br />
-            <CTASection>
-              <MissionCTA href={`/${homepageQuery.mission_cta_destination}`}>
-                {homepageQuery.mission_cta_text}
-              </MissionCTA>
-            </CTASection>
-          </MissionDescription>
-        </MissionSection>
-      </HeroContainer>
+              <HeroDescription>
+                {homepageQuery.hero_description.text}
+              </HeroDescription>
 
+              <DownIcon>
+                <img src={DownArrow} />
+              </DownIcon>
+            </div>
+          </HeroContent>
+
+          <MissionSection>
+            <MissionTitle>{homepageQuery.mission_title}</MissionTitle>
+            <MissionDescription>
+              {homepageQuery.mission_description.text} <br />
+              <CTASection>
+                <MissionCTA href={`/${homepageQuery.mission_cta_destination}`}>
+                  {homepageQuery.mission_cta_text}
+                </MissionCTA>
+              </CTASection>
+            </MissionDescription>
+          </MissionSection>
+        </HeroContainer>
+      </HeroMission>
       <ByTheNumbers>
-        <ByTheNumbersHeader>{homepageQuery.numbers_header}</ByTheNumbersHeader>
+        <ByTheNumbersHeader>
+          <Ticker speed={10} offset={0}>
+            {({ index }) => (
+              <>
+                <div style={{ paddingRight: "0.5em" }}>{`  ${homepageQuery.numbers_header}  `}</div>
+              </>
+            )}
+          </Ticker>
+        </ByTheNumbersHeader>
 
         <Numbers>
           {homepageQuery.numbers.map((object, i) => (
             <Number key={i}>
-              <div>
+              <NumberContent>
                 <NumberText>
                   {object.number.split(" ").length > 1 ? (
                     <div>
@@ -70,28 +111,45 @@ const IndexPage = ({ data }) => {
                 <NumberDescription>
                   {object.number_description}
                 </NumberDescription>
-              </div>
+              </NumberContent>
             </Number>
           ))}
         </Numbers>
       </ByTheNumbers>
+      <CarouselSection>
+        <Carousel
+          className="carousel"
+          leftArrow={<Arrow1 />}
+          rightArrow={<Arrow2 />}
+          show={1}
+          slide={1}
+          swiping={true}
+        >
+          {homepageQuery.venture.map((object, i) => (
+            <VentureCard venture={object} key={i} />
+          ))}
+        </Carousel>
+      </CarouselSection>
 
-      <SupporterImagesSection>
-        <SupporterImages>
-          {homepageQuery.supporter_images.map((image, id) => (
-            <SupporterImage
-              key={id}
-              alt={image.image.alt}
-              src={image.image.url}
+      <WallOfLoveSection>
+        <WallOfLoveHeader>{homepageQuery.wall_of_love_header}</WallOfLoveHeader>
+
+        <WallofLoveDescription>
+          {homepageQuery.wall_of_love_description}
+        </WallofLoveDescription>
+
+        <WallofLoveTestimonials>
+          {homepageQuery.testimonials.map((testimonial, idx) => (
+            <WallTestimonial
+              dangerouslySetInnerHTML={{ __html: testimonial.testimonial.html }}
             />
           ))}
-        </SupporterImages>
-      </SupporterImagesSection>
-
-      <HomeCTAs>
-        <HomeCTA href="/">BECOME A MENTOR</HomeCTA>
-        <HomeCTA href="/">PARTNER WITH US</HomeCTA>
-      </HomeCTAs>
+        </WallofLoveTestimonials>
+        <HomeCTAs>
+          <HomeCTA href="/">BECOME A MENTOR</HomeCTA>
+          <HomeCTA href="/">PARTNER WITH US</HomeCTA>
+        </HomeCTAs>
+      </WallOfLoveSection>
     </Layout>
   );
 };
@@ -100,6 +158,19 @@ export const homepage = graphql`
   query HomeQuery {
     prismicHomepage {
       data {
+        venture {
+          venture_description {
+            text
+          }
+          venture_image {
+            url
+          }
+          venture_logo {
+            url
+          }
+          venture_title
+          venture_name
+        }
         hero_description {
           text
         }
@@ -120,6 +191,15 @@ export const homepage = graphql`
           image {
             url
             alt
+          }
+        }
+
+        wall_of_love_description
+        wall_of_love_header
+        testimonials {
+          testimonial {
+            richText
+            html
           }
         }
       }

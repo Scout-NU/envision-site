@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
+import dimensions from "../styles/dimensions";
 import PortfolioGradient from "../images/portfolio-gradient.png";
+
+
+export const PortfolioBackground = styled.div`
+`;
 
 export const PortfolioContainer = styled.div`
   background: url(${PortfolioGradient}) center no-repeat;
@@ -47,6 +52,10 @@ export const CohortHeader = styled.div`
   background-color: ${colors.black};
   padding-top: 29px;
   margin-bottom: 14px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-left: 6vw;
+  }
 `;
 
 export const CohortHeaderText = styled.div`
@@ -83,6 +92,11 @@ export const CohortButton = styled.div`
   width: 27vw;
   margin-top: 30px;
   margin-right: 1.66vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 86vw;
+    margin-left: 6vw;
+  }
 `;
 
 export const CohortButtonHeader = styled.div`
@@ -103,12 +117,21 @@ export const CohortImages = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 86vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-left: 6vw;
+  }
 `;
 
 export const MemberImage = styled.img`
   width: 27vw;
   height: 434px;
   object-fit: cover;
+  margin-bottom: 30px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    height: 151px;
+  }
 `;
 
 export const MemberContainer = styled.div`
@@ -116,7 +139,10 @@ export const MemberContainer = styled.div`
   width: 27vw;
   height: 434px;
   margin-right: 1.66vw;
-  margin-bottom: 25px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    height: 151px;
+  }
 `;
 
 export const MemberText = styled.div`
@@ -131,9 +157,15 @@ export const MemberText = styled.div`
   height: 434px;
   background-color: rgb(0, 0, 0, 0.71);
   opacity: 0;
+  display: block;
 
   &:hover {
     opacity: 255;
+  }
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    height: 151px;
+    display: none;
   }
 `;
 

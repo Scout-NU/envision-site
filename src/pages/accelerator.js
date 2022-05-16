@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState, useEffect, useWindowWidth } from "react";
 import { graphql } from "gatsby";
 import "../styles/fonts.scss";
 import Layout from "../components/Layout";
@@ -17,30 +18,42 @@ import {
   CTAAlign,
   CTALink,
   AcceleratorCTA,
+  AcceleratorBackground,
 } from "../styles/Accelerator.styles";
 import Ticker from "react-ticker";
+import Training from "../svg/training.svg";
 import ResourceArrow from "../images/resourcelink.png";
+import useWindowSize from "../components/useGatsbyWindowSize";
 
 const Accelerator = ({ data }) => {
   const acceleratorQuery = data.prismicAccelerator.data;
+  const windowSize = useWindowSize();
 
   return (
     <Layout>
-      <AcceleratorHeader>
-        {acceleratorQuery.accelerator_header}
-      </AcceleratorHeader>
+      <AcceleratorBackground>
+        <AcceleratorHeader>
+          {acceleratorQuery.accelerator_header}
+        </AcceleratorHeader>
 
-      <InfoSection>
-        {acceleratorQuery.accelerator_info.map((item, idx) => (
-          <InfoItem>
-            <InfoIcon alt={item.icon.alt} src={item.icon.url} />
-            <InfoText>
-              <InfoHeader>{item.info_header}</InfoHeader>
-              <InfoDescription>{item.info_description}</InfoDescription>
-            </InfoText>
-          </InfoItem>
-        ))}
-      </InfoSection>
+        <InfoSection>
+          {acceleratorQuery.accelerator_info.map((item, idx) => (
+            <InfoItem>
+              <InfoIcon
+                alt={item.icon.alt}
+                src={
+                  windowSize.width > 768 ? item.icon.url : item.mobile_icon.url
+                }
+              />
+
+              <InfoText>
+                <InfoHeader>{item.info_header}</InfoHeader>
+                <InfoDescription>{item.info_description}</InfoDescription>
+              </InfoText>
+            </InfoItem>
+          ))}
+        </InfoSection>
+      </AcceleratorBackground>
 
       <TickerSection>
         <Ticker speed={10} offset={0}>
@@ -63,6 +76,7 @@ const Accelerator = ({ data }) => {
           )}
         </Ticker>
       </TickerSection>
+
       <AcceleratorCTA>
         <div>
           <CTAHeader> {acceleratorQuery.cta_header_text}</CTAHeader>
@@ -87,6 +101,10 @@ export const accelerator = graphql`
           icon {
             alt
             url
+          }
+          mobile_icon {
+            url
+            alt
           }
           info_description
           info_header

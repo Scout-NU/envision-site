@@ -1,73 +1,81 @@
 {
-  "Main": {
-    "accelerator_header": {
-      "type": "Text",
-      "config": {
-        "label": "Accelerator Header"
+  "Main" : {
+    "accelerator_header" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Accelerator Header"
       }
     },
-    "accelerator_info": {
-      "type": "Group",
-      "config": {
-        "fields": {
-          "icon": {
-            "type": "Image",
-            "config": {
-              "constraint": {},
-              "thumbnails": [],
-              "label": "Icon"
+    "accelerator_info" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "icon" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "Icon"
             }
           },
-          "info_header": {
-            "type": "Text",
-            "config": {
-              "label": "Info Header"
+          "mobile_icon" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "mobile icon"
             }
           },
-          "info_description": {
-            "type": "Text",
-            "config": {
-              "label": "Info Description"
+          "info_header" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Info Header"
+            }
+          },
+          "info_description" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Info Description"
             }
           }
         },
-        "label": "Accelerator Info"
+        "label" : "Accelerator Info"
       }
     },
-    "resource_library_link_destination": {
-      "type": "Text",
-      "config": {
-        "label": "Resource Library Link Destination"
+    "resource_library_link_destination" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Resource Library Link Destination"
       }
     },
-    "resource_library_link": {
-      "type": "Text",
-      "config": {
-        "label": "Resource Library Link"
+    "resource_library_link" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Resource Library Link"
       }
     },
-    "resource_library_text": {
-      "type": "Text",
-      "config": {
-        "label": "Resource Library Text"
+    "resource_library_text" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Resource Library Text"
       }
     },
-    "cta_header_text": {
-      "type": "Text",
-      "config": {
-        "label": "CTA Header Text"
+    "cta_header_text" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "CTA Header Text"
       }
     },
-    "button_text": {
-      "type": "Text",
-      "config": {
-        "label": "Button Text"
+    "button_text" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Button Text"
       }
     },
-    "button_destination": {
-      "type": "Text",
-      "config": {
-        "label": "button destination"
+    "button_destination" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "button destination"
       }
     }
   }

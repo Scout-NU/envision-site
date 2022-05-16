@@ -1,10 +1,20 @@
 import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
+import dimensions from "../styles/dimensions";
+import ApplyGradient1 from "../images/gradientsFINAL-apply1.png";
+import ApplyGradient2 from "../images/gradientsFINAL-apply2.png";
 
 export const ApplyHeader = styled.div`
-  margin-left: 14vw;
-  margin-top: 316px;
+  padding-left: 14vw;
+  padding-top: 316px;
+  background: url(${ApplyGradient1});
+  background-size: cover;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-left: 20px;
+    padding-bottom: 123px;
+  }
 `;
 
 export const HeaderText = styled.div`
@@ -15,8 +25,12 @@ export const HeaderText = styled.div`
 
 export const Testimonial = styled.div`
   display: flex;
-  margin-top: 115px;
-  margin-bottom: 148px;
+  padding-top: 115px;
+  padding-bottom: 148px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    display: none;
+  }
 `;
 
 export const TestimonialText = styled.div`
@@ -45,6 +59,10 @@ export const CharacteristicsHeader = styled.div`
   font-family: ${fonts.itc_avante_garde};
   width: 27vw;
   padding-top: 95px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 290px;
+  }
 `;
 
 export const CharacteristicsItem = styled.div`
@@ -76,15 +94,13 @@ export const ApplyCTA = styled.div`
 `;
 
 export const FAQs = styled.div`
-  border: solid 1px;
   width: 86vw;
-  margin-left: 6vw;
-  margin-bottom: 211px;
+  padding-left: 6vw;
+  padding-bottom: 211px;
 `;
 
 export const QuestionAnswer = styled.div`
-cursor: pointer;
-
+  cursor: pointer;
 `;
 
 export const QuestionText = styled.div`
@@ -104,18 +120,28 @@ export const QuestionText = styled.div`
 export const Answer = styled.div`
   font-size: ${fonts.QuestionText};
   font-family: ${fonts.space_mono};
+  background-color: ${colors.white};
   padding: 48px;
   display: none;
+  border: solid 1px;
+
 
   &.shown {
     display: block;
   }
 `;
 
+export const FaqSection = styled.div`
+background: url(${ApplyGradient2});
+background-size: cover;
+
+
+`
+
 export const FAQHeader = styled.div`
-  margin-left: 6vw;
+  padding-left: 6vw;
   font-size: ${fonts.Heading2Size};
   font-family: ${fonts.itc_avante_garde};
-  margin-top: 123px;
-  margin-bottom: 73px;
+  padding-top: 123px;
+  padding-bottom: 73px;
 `;

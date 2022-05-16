@@ -16,6 +16,7 @@ import {
   CTALink,
   CTAAlign,
   TickerImages,
+  PartnersBackground,
 } from "../styles/Partners.styles";
 import Ticker from "react-ticker";
 
@@ -24,14 +25,16 @@ const PartnersPage = ({ data }) => {
 
   return (
     <Layout>
-      <PartnersHeader>
-        <PartnersHeaderText>
-          {partnersQuery.partners_headline}
-        </PartnersHeaderText>
-        <PartnersHeaderDescription>
-          {partnersQuery.partners_description.text}
-        </PartnersHeaderDescription>
-      </PartnersHeader>
+      <PartnersBackground>
+        <PartnersHeader>
+          <PartnersHeaderText>
+            {partnersQuery.partners_headline}
+          </PartnersHeaderText>
+          <PartnersHeaderDescription>
+            {partnersQuery.partners_description.text}
+          </PartnersHeaderDescription>
+        </PartnersHeader>
+      </PartnersBackground>
 
       <SponsorSection>
         <SponsorsHeadline> {partnersQuery.sponsors_headline}</SponsorsHeadline>

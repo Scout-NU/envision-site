@@ -1,5 +1,4 @@
 import React from "react";
-import Heart from "../../styles/heart_icon.png";
 import {
   FooterContainer,
   FooterContent,
@@ -11,15 +10,23 @@ import {
   FooterSocial,
   FooterCopyright,
   FooterLinksSection,
+  ContactSection,
+  ConnectSection,
+  StayInTouch,
+  PrivacyPolicy,
+  PrivacyPolicyMobile,
+  FooterImage,
 } from "./Footer.styles";
-
+import MobileImage from "../../images/mobileimage.png";
 
 export default function Footer() {
   return (
     <FooterContainer>
       <FooterContent>
         <FooterCol>
-          <FooterText>STAY IN TOUCH</FooterText>
+          <StayInTouch>
+            <FooterText>STAY IN TOUCH</FooterText>
+          </StayInTouch>
 
           <input
             type="text"
@@ -28,29 +35,53 @@ export default function Footer() {
             name="fname"
           />
 
-          <FooterText>CONTACT</FooterText>
-          <FooterText>EMAIL@ENVISIONACCELERATOR.COM</FooterText>
+          <PrivacyPolicyMobile>
+            <FooterText>PRIVACY POLICY</FooterText>
+          </PrivacyPolicyMobile>
+
+          <ContactSection>
+            <FooterText>CONTACT</FooterText>
+            <FooterText>EMAIL@ENVISIONACCELERATOR.COM</FooterText>
+          </ContactSection>
         </FooterCol>
         <FooterCol>
-          <FooterText>CONNECT</FooterText>
+          <ConnectSection>
+            <FooterText>CONNECT</FooterText>
+          </ConnectSection>
 
           <FooterSocials>
             <FooterSocial />
             <FooterSocial />
             <FooterSocial />
           </FooterSocials>
-
-          <FooterText>PRIVACY POLICY</FooterText>
+          <PrivacyPolicy>
+            <FooterText>PRIVACY POLICY</FooterText>
+          </PrivacyPolicy>
         </FooterCol>
         <FooterLinksSection>
-          <img alt="Heart Icon" src={Heart} />
-          <FooterLinks>
-            <FooterLink>WALL OF LOVE</FooterLink>
-            <FooterLink>ABOUT</FooterLink>
-            <FooterLink>PORTFOLIO</FooterLink>
-            <FooterLink>PARTNERS</FooterLink>
-            <FooterLink>ACCELERATOR</FooterLink>
-          </FooterLinks>
+          <div>
+            <FooterImage src={MobileImage} />
+            <FooterLinks>
+              <FooterLink>
+                <a href="#">WALL OF LOVE</a>
+              </FooterLink>
+              <FooterLink>
+                <a href="/about">ABOUT</a>
+              </FooterLink>
+              <FooterLink>
+                <a href="/portfolio">PORTFOLIO</a>
+              </FooterLink>
+              <FooterLink>
+                <a href="/partners">PARTNERS</a>
+              </FooterLink>
+              <FooterLink>
+                <a href="/accelerator">ACCELERATOR</a>
+              </FooterLink>
+              <FooterLink>
+                <a href="/team">THE TEAM</a>
+              </FooterLink>
+            </FooterLinks>
+          </div>
         </FooterLinksSection>
       </FooterContent>
 

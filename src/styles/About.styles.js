@@ -1,24 +1,36 @@
 import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
-import AboutHeroGradient from "../images/about-hero-gradient.png";
-import ProblemSolutionGradient from "../images/about-problem-solution-gradient.png";
+import dimensions from "../styles/dimensions";
+import About1 from "../images/gradientsFINAL-about1.png";
+import About2 from "../images/gradientsFINAL-about2.png";
+import ProblemSolutionGradient from "../images/about-problem-solution-gradient.png"
 
 export const AboutHero = styled.div`
   padding-left: 14vw;
-  padding-top: 15em;
-  font-family: ${fonts.itc_avante_garde};
-  background: url(${AboutHeroGradient}) center no-repeat;
+  padding-top: 235px;
+  background: url(${About1});
   background-size: cover;
+  font-family: ${fonts.itc_avante_garde};
+  color: ${colors.black};
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-left: 20px;
+  }
 `;
 
 export const AboutHeroText = styled.div`
   font-size: ${fonts.Heading2Size};
-  margin-bottom: 62px;
+  font-weight: 700;
+  padding-bottom: 62px;
 `;
 
 export const AboutHeroParagraph = styled.div`
   display: flex;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    display: block;
+    padding-bottom: 114px;
+  }
 `;
 
 export const ParagraphColumn = styled.div`
@@ -28,11 +40,16 @@ export const ParagraphColumn = styled.div`
   padding-bottom: 114px;
   font-weight: 300;
   font-size: ${fonts.BodySize};
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 335px;
+    padding-bottom: 44px;
+  }
 `;
 
 export const AboutContainer = styled.div`
   background-color: ${colors.black};
-  color: ${colors.white};
+  color: ${colors.black};
 `;
 
 export const ProblemSolution = styled.div`
@@ -43,12 +60,15 @@ export const ProblemSolution = styled.div`
 `;
 
 export const AboutPrinciples = styled.div`
-  padding: 10em 0;
+  padding-bottom: 114px;
+  background-color: ${colors.black};
+  color: ${colors.white};
 `;
 
 export const PrinciplesHeader = styled.div`
   font-size: ${fonts.Heading2Size};
   text-align: center;
+  padding-top: 114px;
   font-family: ${fonts.itc_avante_garde};
 `;
 
@@ -70,6 +90,10 @@ export const GuidingPrinciple = styled.div`
   width: 44vw;
   display: flex;
   justify-content: center;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 80vw;
+  }
 `;
 
 export const HeroHeadline = styled.span`
@@ -97,13 +121,24 @@ export const GuidingPrincipleText = styled.div`
   margin-left: 57px;
 `;
 
+export const ProblemSection = styled.div`
+background: url(${About2});
+background-size: cover;
+
+`
+
 export const TheProblem = styled.div`
   margin-left: 14vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    margin-left: 20px;
+  }
 `;
 
 export const TheProblemHeader = styled.div`
   font-size: ${fonts.NumberSmall};
   font-family: ${fonts.itc_avante_garde};
+  padding-top: 114px;
 `;
 
 export const TheProblemDescription = styled.div`
@@ -112,6 +147,11 @@ export const TheProblemDescription = styled.div`
   font-family: ${fonts.itc_avante_garde};
   width: 37vw;
   font-weight: 300;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 80vw;
+    margin-bottom: 100px;
+  }
 `;
 
 export const SolutionWrapper = styled.div`
@@ -124,6 +164,14 @@ export const TheSolution = styled.div`
   right: 11vw;
   text-align: right;
   width: 37vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    text-align: left;
+    position: relative;
+    width: 80vw;
+    right: 0;
+    padding-left: 20px;
+  }
 `;
 
 export const TheSolutionHeader = styled.div`
@@ -153,4 +201,5 @@ export const AboutCTAContainer = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
+  padding-bottom: 109px;
 `;

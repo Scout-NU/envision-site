@@ -1,6 +1,14 @@
 import styled from "styled-components";
 import colors from "./colors";
 import fonts from "./font_names";
+import dimensions from "../styles/dimensions";
+import Partners from "../images/gradientsFINAL-partners.png"
+
+export const PartnersBackground = styled.div`
+background: url(${Partners});
+background-size: cover;
+
+`
 
 export const PartnersHeader = styled.div``;
 
@@ -8,17 +16,27 @@ export const PartnersHeaderText = styled.div`
   font-family: ${fonts.itc_avante_garde};
   font-size: ${fonts.Heading2Size};
   font-weight: 700;
-  margin-top: 546px;
-  margin-left: 6vw;
+  padding-top: 546px;
+  padding-left: 6vw;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-top: 137px;
+    padding-left: 20px;
+  }
 `;
 
 export const PartnersHeaderDescription = styled.div`
   font-family: ${fonts.itc_avante_garde};
   font-size: ${fonts.BookSub};
   font-weight: 300;
-  margin-left: 42vw;
+  padding-left: 42vw;
   width: 42vw;
-  margin-bottom: 64px;
+  padding-bottom: 64px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    padding-left: 20px;
+    width: 300px;
+  }
 `;
 
 export const SponsorSection = styled.div`
@@ -40,11 +58,13 @@ export const SponsorsDescription = styled.div`
   color: ${colors.white};
   width: 40vw;
   padding-top: 22px;
+
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    width: 300px;
+  }
 `;
 
 export const SponsorImage = styled.img`
-  // width: 243px;
-  // height: 172px;
   margin-top: 27px;
   margin-left: 42px;
   margin-bottom: 27px;
@@ -69,6 +89,9 @@ export const PartnersCTA = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: no-wrap;
+  @media (max-width: ${dimensions.maxwidthTablet}px) {
+    display: none;
+  }
 `;
 
 export const CTAHeader = styled.div`

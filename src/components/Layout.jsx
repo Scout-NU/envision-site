@@ -9,9 +9,7 @@ export default function Layout({ children, headerMode }) {
   return (
     <LayoutContainer>
       <Header headerMode={headerMode} />
-
       {children}
-
       <Footer />
     </LayoutContainer>
   );
