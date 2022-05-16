@@ -3,6 +3,8 @@ import colors from "./colors";
 import fonts from "./font_names";
 import dimensions from "../styles/dimensions";
 import Portfolio from "../images/gradientsFINAL-portfolio.png";
+import PortfolioGradient from "../images/portfolio-gradient.png";
+
 
 export const PortfolioBackground = styled.div`
   background: url(${Portfolio});

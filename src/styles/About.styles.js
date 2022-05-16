@@ -4,6 +4,7 @@ import fonts from "./font_names";
 import dimensions from "../styles/dimensions";
 import About1 from "../images/gradientsFINAL-about1.png";
 import About2 from "../images/gradientsFINAL-about2.png";
+import ProblemSolutionGradient from "../images/about-problem-solution-gradient.png"
 
 export const AboutHero = styled.div`
   padding-left: 14vw;
@@ -11,6 +12,7 @@ export const AboutHero = styled.div`
   background: url(${About1});
   background-size: cover;
   font-family: ${fonts.itc_avante_garde};
+  color: ${colors.black};
   @media (max-width: ${dimensions.maxwidthTablet}px) {
     padding-left: 20px;
   }
@@ -47,7 +49,7 @@ export const ParagraphColumn = styled.div`
 
 export const AboutContainer = styled.div`
   background-color: ${colors.black};
-  color: ${colors.white};
+  color: ${colors.black};
 `;
 
 export const ProblemSolution = styled.div`

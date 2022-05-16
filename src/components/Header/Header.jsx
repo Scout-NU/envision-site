@@ -17,7 +17,6 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <BackgroundColor>
       <HeaderContainer className={open ? "open" : ""}>
         <NavSection>
           <Logo href="/">ENVISION</Logo>
@@ -74,6 +73,5 @@ export default function Header() {
           </HamburgerLinks>
         </NavSection>
       </HeaderContainer>
-    </BackgroundColor>
   );
 }
