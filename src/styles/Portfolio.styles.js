@@ -9,7 +9,10 @@ export const PortfolioBackground = styled.div`
   background-size: cover;
 `;
 
-export const PortfolioContainer = styled.div``;
+export const PortfolioContainer = styled.div`
+  background: url(${PortfolioGradient}) center no-repeat;
+  background-size: cover;
+`;
 
 export const PortfolioHeader = styled.div`
   font-size: ${fonts.Heading2Size};
@@ -45,7 +48,7 @@ export const PortfolioCTAWrapper = styled.div`
 `;
 
 export const CohortHeader = styled.div`
-  width: 86vw;
+  width: 84.4vw;
   text-align: center;
   background-color: ${colors.black};
   padding-top: 29px;

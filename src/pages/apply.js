@@ -4,7 +4,6 @@ import "../styles/fonts.scss";
 import Question from "../components/Question";
 import Layout from "../components/Layout";
 import {
-  Answer,
   ApplyCTA,
   ApplyHeader,
   CharacteristicItem,

@@ -2,7 +2,6 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import "../styles/fonts.scss";
 import Layout from "../components/Layout";
-
 import {
   AboutContainer,
   AboutHero,
@@ -40,7 +39,11 @@ const AboutPage = ({ data }) => {
       <AboutContainer>
         <AboutHero>
           <AboutHeroText>
-            <HeroHeadline>{aboutQuery.about_header}</HeroHeadline>
+            {aboutQuery.about_header.split(" ").map((word, id) => (
+                <HeroHeadline key={id} black={id === 2}>
+                  {word}{" "}
+                </HeroHeadline>
+              ))}
           </AboutHeroText>
 
           <AboutHeroParagraph>
@@ -87,9 +90,9 @@ const AboutPage = ({ data }) => {
           </TheProblemDescription>
         </TheProblem>
 
-        <SolutionWrapper>
-          <TheSolution>
-            <TheSolutionHeader>{aboutQuery.solution_header}</TheSolutionHeader>
+          <SolutionWrapper>
+            <TheSolution>
+              <TheSolutionHeader>{aboutQuery.solution_header}</TheSolutionHeader>
 
             <TheSolutionDescription>
               {aboutQuery.solutions_description.text}

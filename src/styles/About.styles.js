@@ -46,7 +46,15 @@ export const ParagraphColumn = styled.div`
 `;
 
 export const AboutContainer = styled.div`
-  background-color: ${colors.white};
+  background-color: ${colors.black};
+  color: ${colors.white};
+`;
+
+export const ProblemSolution = styled.div`
+  background: url(${ProblemSolutionGradient}) center no-repeat;
+  background-size: cover;
+  color: ${colors.black};
+  padding: 5em 0;
 `;
 
 export const AboutPrinciples = styled.div`
@@ -87,8 +95,9 @@ export const GuidingPrinciple = styled.div`
 `;
 
 export const HeroHeadline = styled.span`
-  color: ${colors.black};
+  font-weight: ${(props) => props.black ? '700' : '400'};
 `;
+
 export const GuidingPrincipleHeader = styled.div`
   font-family: ${fonts.space_mono};
   font-size: ${fonts.BookSub};

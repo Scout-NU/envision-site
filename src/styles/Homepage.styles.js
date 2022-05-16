@@ -12,6 +12,7 @@ export const HeroMission = styled.div`
 `;
 
 export const HeroContainer = styled.div`
+  background: url(${HeroGradient}) center no-repeat;
   background-size: cover;
 
   @media (max-width: ${dimensions.maxwidthTablet}px) {
@@ -161,7 +162,8 @@ export const CarouselSection = styled.div`
   }
 `;
 export const ByTheNumbers = styled.div`
-  background-color: ${colors.white};
+  background: url(${NumbersGradient}) center no-repeat;
+  background-size: cover;
 `;
 
 export const ByTheNumbersHeader = styled.div`
