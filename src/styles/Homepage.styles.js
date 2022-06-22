@@ -6,17 +6,16 @@ import HomeGradient2 from "../images/gradientsFINAL-home2.png";
 import HomeGradient3 from "../images/gradientsFINAL-home3.png";
 import NumbersGradient from "../images/homepage-numbers-gradient.png";
 
-
 export const HeroMission = styled.div`
   background-size: cover;
 `;
 
 export const HeroContainer = styled.div`
-background: url("https://i.imgur.com/lcybSZv.png");
-background-size: cover;
+  background-color: ${colors.black};
 
-  @media (max-width: ${dimensions.maxwidthTablet}px) {
-    background-color: ${colors.black};
+  @media (min-width: ${dimensions.maxwidthTablet}px) {
+    background: url("https://i.imgur.com/lcybSZv.png");
+    background-size: cover;
   }
 `;
 
@@ -85,7 +84,6 @@ export const MissionSection = styled.div`
     padding-top: 100px;
     background: url(${HomeGradient2});
     background-size: cover;
-
   }
 `;
 
@@ -198,7 +196,6 @@ export const Numbers = styled.div`
     text-align: left;
     padding-left: 0px;
     padding-top: 50px;
-
   }
 `;
 
@@ -308,8 +305,8 @@ export const HomeCTA = styled.a`
 `;
 
 export const WallOfLoveSection = styled.div`
-background: url(${HomeGradient3});
-background-size: cover;
+  background: url(${HomeGradient3});
+  background-size: cover;
 `;
 
 export const WallOfLoveHeader = styled.div`
